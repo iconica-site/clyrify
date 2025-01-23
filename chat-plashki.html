@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сообщения</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marck+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<style>
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.chat-header input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.2s ease;
+  border: solid 1px #E0E3E8;
+}
+
+.chat-item:hover {
+  background-color: #f9f9f9;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.chat-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.chat-message {
+  display: -webkit-box; 
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical; 
+  overflow: hidden; 
+  text-overflow: ellipsis;
+  max-height: calc(1.5em * 2); 
+  font-size: 14px; 
+  color: #555; 
+  margin-block-start: 5px;
+  margin-block-end: 5px;
+}
+
+.chat-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.chat-and-meters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 0px;
+  right: 6px;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background-color: #ccc; 
+}
+
+.status-indicator.online {
+  background-color: #4caf50; 
+}
+</style>
+
+<body>
+    <div class="index-center">
+        <div class="index-content">
+            <div class="city-buttons" id="profile-head">
+                <div class="step-header">
+                  <span>Messages</span>
+                </div>
+                <a>
+                    <div class="icon-wrapper">
+                        <div class="icon-border-favor">
+                            <svg style="margin-top: 3px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M3.27256 7.73064C3.27259 4.03443 6.28617 1.0415 9.99935 1.0415C13.7125 1.0415 16.7261 4.03446 16.7261 7.73069C16.7262 8.59049 16.784 9.23932 17.1805 9.82256C17.3313 10.0413 17.6171 10.4112 17.8074 10.7086C18.0206 11.0418 18.2289 11.4435 18.3005 11.9117C18.534 13.439 17.4572 14.4279 16.3848 14.871C12.6075 16.4317 7.39115 16.4317 3.6139 14.871C2.54148 14.4279 1.46465 13.439 1.69825 11.9117C1.76984 11.4435 1.97812 11.0417 2.19129 10.7086C2.38162 10.4111 2.66742 10.0412 2.81827 9.82249C3.21467 9.23928 3.27249 8.59038 3.27256 7.73064Z" fill="#16171D"/>
+                                <path d="M12.3147 18.2926C11.6452 18.7136 10.8489 18.9564 9.99872 18.9564C9.1485 18.9564 8.35227 18.7136 7.68278 18.2926C7.08858 17.9189 6.79148 17.732 6.89545 17.4214C6.99942 17.1108 7.40938 17.1456 8.22932 17.2152C9.40197 17.3147 10.5955 17.3147 11.7681 17.2152C12.5881 17.1456 12.998 17.1108 13.102 17.4214C13.206 17.732 12.9089 17.9189 12.3147 18.2926Z" fill="#16171D"/>
+                            </svg>
+                        </div>
+                        <nav class="unread-count-new">8</nav>
+                    </div>
+                </a>
+              </div>
+
+        <div class="search-bar">
+            <div class="search-input">
+                <i class="search-icon"></i>
+                <input type="text" placeholder="Find a performer">
+            </div>
+            <button class="settings-button">
+                <i class="settings-icon"></i>
+            </button>
+        </div>
+
+        <div class="chat-container">
+
+            <div class="chat-list">
+
+                <div class="chat-item">
+                    <div class="avatar-wrapper">
+                        <img class="avatar" src="img/avatar.png" />
+                        <span class="status-indicator online"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-and-meters">
+                            <h4 class="chat-name">Brooklyn Simmons</h4>
+                            <span class="chat-time">22m</span>
+                        </div>
+                        <p class="chat-message">
+                            Hello! I am interested in your services. Can you provide more details about availability and pricing?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <div class="avatar-wrapper">
+                        <img class="avatar" src="img/image 4.png" />
+                        <span class="status-indicator"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-and-meters">
+                            <h4 class="chat-name">Amanda Thompson</h4>
+                            <span class="chat-time">18m</span>
+                        </div>
+                        <p class="chat-message">
+                            Thank you for confirming the order. I am looking forward to the service on Monday, 12th February, at 3:00 PM.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                    <div class="avatar-wrapper">
+                        <img class="avatar" src="img/Group 34.png" />
+                        <span class="status-indicator"></span>
+                    </div>
+                    <div class="chat-info">
+                        <div class="chat-and-meters">
+                            <h4 class="chat-name">David Rodriguez</h4>
+                            <span class="chat-time">15m</span>
+                        </div>
+                        <p class="chat-message">
+                            Can we reschedule the service to Wednesday, 14th February at 4:30 PM ? Please let me know if it works for you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="chat-item">
+                  <div class="avatar-wrapper">
+                      <img class="avatar" src="img/avatar.png" />
+                      <span class="status-indicator online"></span>
+                  </div>
+                  <div class="chat-info">
+                      <div class="chat-and-meters">
+                          <h4 class="chat-name">Brooklyn Simmons</h4>
+                          <span class="chat-time">22m</span>
+                      </div>
+                      <p class="chat-message">
+                          Hello! I am interested in your services. Can you provide more details about availability and pricing?
+                      </p>
+                  </div>
+              </div>
+
+              <div class="chat-item">
+                  <div class="avatar-wrapper">
+                      <img class="avatar" src="img/image 4.png" />
+                      <span class="status-indicator"></span>
+                  </div>
+                  <div class="chat-info">
+                      <div class="chat-and-meters">
+                          <h4 class="chat-name">Amanda Thompson</h4>
+                          <span class="chat-time">18m</span>
+                      </div>
+                      <p class="chat-message">
+                          Thank you for confirming the order. I am looking forward to the service on Monday, 12th February, at 3:00 PM.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="chat-item">
+                  <div class="avatar-wrapper">
+                      <img class="avatar" src="img/Group 34.png" />
+                      <span class="status-indicator"></span>
+                  </div>
+                  <div class="chat-info">
+                      <div class="chat-and-meters">
+                          <h4 class="chat-name">David Rodriguez</h4>
+                          <span class="chat-time">15m</span>
+                      </div>
+                      <p class="chat-message">
+                          Can we reschedule the service to Wednesday, 14th February at 4:30 PM ? Please let me know if it works for you.
+                      </p>
+                  </div>
+              </div>
+
+              <div class="chat-item">
+                <div class="avatar-wrapper">
+                    <img class="avatar" src="img/avatar.png" />
+                    <span class="status-indicator online"></span>
+                </div>
+                <div class="chat-info">
+                    <div class="chat-and-meters">
+                        <h4 class="chat-name">Brooklyn Simmons</h4>
+                        <span class="chat-time">22m</span>
+                    </div>
+                    <p class="chat-message">
+                        Hello! I am interested in your services. Can you provide more details about availability and pricing?
+                    </p>
+                </div>
+            </div>
+
+            <div class="chat-item">
+                <div class="avatar-wrapper">
+                    <img class="avatar" src="img/image 4.png" />
+                    <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                    <div class="chat-and-meters">
+                        <h4 class="chat-name">Amanda Thompson</h4>
+                        <span class="chat-time">18m</span>
+                    </div>
+                    <p class="chat-message">
+                        Thank you for confirming the order. I am looking forward to the service on Monday, 12th February, at 3:00 PM.
+                    </p>
+                </div>
+            </div>
+
+            <div class="chat-item">
+                <div class="avatar-wrapper">
+                    <img class="avatar" src="img/Group 34.png" />
+                    <span class="status-indicator"></span>
+                </div>
+                <div class="chat-info">
+                    <div class="chat-and-meters">
+                        <h4 class="chat-name">David Rodriguez</h4>
+                        <span class="chat-time">15m</span>
+                    </div>
+                    <p class="chat-message">
+                        Can we reschedule the service to Wednesday, 14th February at 4:30 PM ? Please let me know if it works for you.
+                    </p>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="navbar">
+      <div class="navbar-item" data-label="Home">
+          <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path id="in-icon" d="M15 17C14.2005 17.6224 13.1502 18 12 18C10.8498 18 9.79952 17.6224 9 17" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+                  <path d="M2.35139 13.2135C1.99837 10.9162 1.82186 9.76763 2.25617 8.74938C2.69047 7.73112 3.65403 7.03443 5.58114 5.64106L7.02099 4.6C9.41829 2.86667 10.6169 2 12 2C13.3831 2 14.5817 2.86667 16.979 4.6L18.4189 5.64106C20.346 7.03443 21.3095 7.73112 21.7438 8.74938C22.1781 9.76763 22.0016 10.9162 21.6486 13.2135L21.3476 15.1724C20.8471 18.4289 20.5969 20.0572 19.429 21.0286C18.2611 22 16.5537 22 13.1388 22H10.8612C7.44633 22 5.73891 22 4.571 21.0286C3.40309 20.0572 3.15287 18.4289 2.65243 15.1724L2.35139 13.2135Z" stroke="#16171D" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+          </span>
+      </div>
+      <div class="navbar-item active" data-label="Chat">
+          <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path id="in-icon"  d="M8.5 14.5H15.5M8.5 9.5H12" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14.1706 20.8905C18.3536 20.6125 21.6856 17.2332 21.9598 12.9909C22.0134 12.1607 22.0134 11.3009 21.9598 10.4707C21.6856 6.22838 18.3536 2.84913 14.1706 2.57107C12.7435 2.47621 11.2536 2.47641 9.8294 2.57107C5.64639 2.84913 2.31441 6.22838 2.04024 10.4707C1.98659 11.3009 1.98659 12.1607 2.04024 12.9909C2.1401 14.536 2.82343 15.9666 3.62791 17.1746C4.09501 18.0203 3.78674 19.0758 3.30021 19.9978C2.94941 20.6626 2.77401 20.995 2.91484 21.2351C3.05568 21.4752 3.37026 21.4829 3.99943 21.4982C5.24367 21.5285 6.08268 21.1757 6.74868 20.6846C7.1264 20.4061 7.31527 20.2668 7.44544 20.2508C7.5756 20.2348 7.83177 20.3403 8.34401 20.5513C8.8044 20.7409 9.33896 20.8579 9.8294 20.8905C11.2536 20.9852 12.7435 20.9854 14.1706 20.8905Z" stroke="#16171D" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+          </span>
+          <span class="badge">2</span>
+      </div>
+      <div class="navbar-item" data-label="Objects">
+          <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path id="in-icon"  d="M15.5 11C15.5 12.933 13.933 14.5 12 14.5C10.067 14.5 8.5 12.933 8.5 11C8.5 9.067 10.067 7.5 12 7.5C13.933 7.5 15.5 9.067 15.5 11Z" stroke="#16171D" stroke-width="1.5"/>
+                  <path d="M12 2C16.8706 2 21 6.03298 21 10.9258C21 15.8965 16.8033 19.3847 12.927 21.7567C12.6445 21.9162 12.325 22 12 22C11.675 22 11.3555 21.9162 11.073 21.7567C7.2039 19.3616 3 15.9137 3 10.9258C3 6.03298 7.12944 2 12 2Z" stroke="#16171D" stroke-width="1.5"/>
+              </svg>
+          </span>
+      </div>
+      <div class="navbar-item" data-label="Profile">
+          <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="10" stroke="#16171D" stroke-width="1.5"/>
+                  <path id="in-icon"  d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+          </span>
+      </div>
+      <div class="navbar-item" data-label="List">
+          <span class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path id="in-icon"  d="M3.5 9.36842C3.5 5.89491 3.5 4.15816 4.52513 3.07908C5.55025 2 7.20017 2 10.5 2L13.5 2C16.7998 2 18.4497 2 19.4749 3.07908C20.5 4.15816 20.5 5.89491 20.5 9.36842V14.6316C20.5 18.1051 20.5 19.8418 19.4749 20.9209C18.4497 22 16.7998 22 13.5 22L10.5 22C7.20017 22 5.55025 22 4.52513 20.9209C3.5 19.8418 3.5 18.1051 3.5 14.6316L3.5 9.36842Z" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path id="in-icon"  d="M8 2L8.0822 2.4932C8.28174 3.69044 8.38151 4.28906 8.80113 4.64453C9.22075 5 9.82762 5 11.0414 5L12.9586 5C14.1724 5 14.7793 5 15.1989 4.64453C15.6185 4.28906 15.7183 3.69044 15.9178 2.4932L16 2" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 16H12M8 11L16 11" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+          </span>
+      </div>
+  </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

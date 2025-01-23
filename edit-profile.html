@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль (заказчик)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marck+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<style>
+
+.camera-icon {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    width: 24px !important;
+    height: 24px !important;
+    background-color: #3498DB;
+    border-radius: 50%;
+    padding: 5px;
+    border: solid 1px #FFFFFF;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+
+</style>
+
+<body>
+    <div class="index-center">
+        <div class="index-content">
+            <div class="city-buttons" id="profile-head">
+                <div class="c-city">
+                        <a><img src="img/back-button.svg"></a>
+                        <h1>Редактирование профиля</h1>
+                </div>
+            </div>
+
+            <div class="edit-profile-main">
+                <div class="edit-profile-avatar">
+                    <div class="gradient-border gra-bor-for-edit">
+                        <img src="img/avatar5.png">
+                        <img src="img/camera-02.svg" alt="Camera Icon" class="camera-icon">
+                    </div>
+                </div>
+
+                <div class="edit-profile-inputs">
+                    <div class="edit-profile-input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#16171D" stroke-width="1.5"/>
+                            <path d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                        <input type="text" value="Алина Доу">
+                    </div>
+                </div>
+
+                <div class="edit-profile-inputs">
+                    <div class="edit-profile-input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" fill="none">
+                            <path d="M5.83398 7.0835L8.28566 8.53302C9.715 9.3781 10.2863 9.3781 11.7156 8.53302L14.1673 7.0835" stroke="#383F4F" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1.68013 11.2298C1.73461 13.7844 1.76185 15.0617 2.70446 16.0079C3.64706 16.9541 4.95894 16.987 7.58268 17.0529C9.19975 17.0936 10.8009 17.0936 12.418 17.0529C15.0417 16.987 16.3536 16.9541 17.2962 16.0079C18.2388 15.0617 18.266 13.7844 18.3205 11.2298C18.338 10.4084 18.338 9.59181 18.3205 8.77041C18.266 6.2158 18.2388 4.93849 17.2962 3.9923C16.3536 3.04611 15.0417 3.01315 12.418 2.94722C10.8009 2.90659 9.19975 2.90659 7.58268 2.94722C4.95893 3.01313 3.64706 3.04609 2.70445 3.99229C1.76184 4.93848 1.73461 6.21579 1.68013 8.7704C1.66261 9.5918 1.66261 10.4084 1.68013 11.2298Z" stroke="#383F4F" stroke-width="1.25" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" value="alina@gmail.com">
+                    </div>
+                </div>
+
+                <div class="edit-profile-inputs">
+                    <div class="edit-profile-input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" fill="none">
+                            <path d="M12.9163 9.16667C12.9163 10.7775 11.6105 12.0833 9.99967 12.0833C8.38884 12.0833 7.08301 10.7775 7.08301 9.16667C7.08301 7.55584 8.38884 6.25 9.99967 6.25C11.6105 6.25 12.9163 7.55584 12.9163 9.16667Z" stroke="#383F4F" stroke-width="1.25"/>
+                            <path d="M10 1.66675C14.0588 1.66675 17.5 5.02756 17.5 9.10489C17.5 13.2471 14.0028 16.154 10.7725 18.1307C10.5371 18.2635 10.2709 18.3334 10 18.3334C9.72913 18.3334 9.46291 18.2635 9.2275 18.1307C6.00325 16.1347 2.5 13.2615 2.5 9.10489C2.5 5.02756 5.9412 1.66675 10 1.66675Z" stroke="#383F4F" stroke-width="1.25"/>
+                        </svg>
+                        <input type="text" value="Rd. Santa Ana, Illinois">
+                    </div>
+                </div>
+
+                <div class="edit-profile-inputs">
+                    <div class="edit-profile-input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" fill="none">
+                            <path d="M10.0003 18.3332C14.6027 18.3332 18.3337 14.6022 18.3337 9.99984C18.3337 5.39746 14.6027 1.6665 10.0003 1.6665C5.39795 1.6665 1.66699 5.39746 1.66699 9.99984C1.66699 14.6022 5.39795 18.3332 10.0003 18.3332Z" stroke="#383F4F" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
+                            <path d="M17.5 12.4998H2.5M17.5 7.49984H2.5M6.66667 9.99984C6.66667 14.9998 10 18.3332 10 18.3332C10 18.3332 13.3333 14.9998 13.3333 9.99984C13.3333 4.99984 10 1.6665 10 1.6665C10 1.6665 6.66667 4.99984 6.66667 9.99984Z" stroke="#383F4F" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="text" value="Русский, Английский, Украинский">
+                    </div>
+                </div>
+
+                <div class="edit-profile-inputs">
+                    <div class="edit-profile-input-with-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 20 20" fill="none">
+                            <g clip-path="url(#clip0_6_57625)">
+                            <mask id="mask0_6_57625" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                            <path d="M0 1.90735e-06H20V20H0V1.90735e-06Z" fill="white"/>
+                            </mask>
+                            <g mask="url(#mask0_6_57625)">
+                            <path d="M15.8984 8.78906C15.8984 11.3779 13.7607 13.4766 11.1719 13.4766C8.58305 13.4766 6.48438 11.3779 6.48438 8.78906C6.48438 6.20023 8.58305 4.10156 11.1719 4.10156C13.7607 4.10156 15.8984 6.20023 15.8984 8.78906Z" stroke="#383F4F" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 8.78906C10 11.3779 7.90133 13.4766 5.3125 13.4766C2.72367 13.4766 0.585938 11.3779 0.585938 8.78906C0.585938 6.20023 2.72367 4.10156 5.3125 4.10156C7.90133 4.10156 10 6.20023 10 8.78906Z" stroke="#383F4F" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5.3125 13.4766V19.4141" stroke="#383F4F" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.96875 17.0703H7.65625" stroke="#383F4F" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.8984 0.585938H19.4141V4.10156" stroke="#383F4F" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.5254 5.47461L19.2577 0.742344" stroke="#383F4F" stroke-width="1.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            </g>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_6_57625">
+                            <rect width="20" height="20" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        <input type="text" value="Женский">
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <button class="button" id="next-button">Сохранить</button>
+            </div>
+
+            
+
+            
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+</html>

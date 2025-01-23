@@ -1,0 +1,122 @@
+<html lang="ru"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marck+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+    <link rel="stylesheet" href="flag/css/flag-icon.css">
+    <link rel="stylesheet" href="flag/css/flag-icon.min.css">
+</head>
+
+<style>
+
+
+
+
+</style>
+
+<body>
+    <div class="index-center">
+        <div class="index-content">
+            <div class="city-buttons" id="profile-head">
+                <div class="reg-title-h2">
+                        <h2>Login or Register to your <span>Clyrify account</span></h2>
+                </div>
+            </div>
+
+            <div class="register-buttons-or">
+                <div class="reg-butt-main">
+                    <a class="active">Я заказчик</a>
+                    <a>Я исполнитель</a>
+                </div>
+            </div>
+
+            <div class="register-input-phone">
+                <div class="phone-container">
+                    <div class="dropdown-flag">
+                        <button class="dropdown-btn-flag">
+                            <div class="flag-icon flag-icon-ru"></div>
+                            <span class="country-code">(+7)</span>
+                        </button>
+                        <ul class="dropdown-menu-flag">
+                            <li data-code="+1" data-flag="us">
+                                <span class="flag-icon flag-icon-us"></span> United States (+1)
+                            </li>
+                            <li data-code="+44" data-flag="gb">
+                                <span class="flag-icon flag-icon-gb"></span> United Kingdom (+44)
+                            </li>
+                            <li data-code="+49" data-flag="de">
+                                <span class="flag-icon flag-icon-de"></span> Germany (+49)
+                            </li>
+                            <li data-code="+7" data-flag="ru">
+                                <span class="flag-icon flag-icon-ru"></span> Russia (+7)
+                            </li>
+                        </ul>
+                    </div>
+                    <input type="tel" placeholder="123-4567-901">
+                </div>
+                <span class="phone-hint">Мы отправим вам SMS, чтобы подтвердить номер телефона. Применяются стандартные условия вашего тарифа на прием сообщений и передачу данных.</span>
+            </div>
+            
+
+            <div class="bottom-bar-button butt-for-reg">
+                <button class="button">Продолжить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const dropdownBtn = document.querySelector(".dropdown-btn-flag");
+    const dropdownMenu = document.querySelector(".dropdown-menu-flag");
+    const flagIcon = dropdownBtn.querySelector(".flag-icon");
+    const countryCodeSpan = dropdownBtn.querySelector(".country-code");
+
+    // Toggle dropdown menu visibility
+    dropdownBtn.addEventListener("click", () => {
+        dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    // Handle menu item selection
+    dropdownMenu.addEventListener("click", (e) => {
+        const li = e.target.closest("li");
+        if (li) {
+            const selectedFlag = li.getAttribute("data-flag");
+            const selectedCode = li.getAttribute("data-code");
+
+            // Update flag and country code
+            flagIcon.className = `flag-icon flag-icon-${selectedFlag}`;
+            countryCodeSpan.textContent = `(${selectedCode})`;
+
+            // Close dropdown
+            dropdownMenu.style.display = "none";
+        }
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener("click", (e) => {
+        if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+});
+
+
+
+</script>
+</body>
+</html>
