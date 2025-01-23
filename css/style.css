@@ -573,14 +573,42 @@ body {
     margin-right: 5px;
 }
 .object-block {
-    max-width: 345px;
+    /* max-width: 345px; */
     /* height: 158px; */
     background-color: white;
-    padding: 15px;
+    padding: 10px 15px;
     border-radius: 12px;
     margin-bottom: 10px;
     box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2); /* Небольшое затенение */
 }
+
+.modal-object-deltete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-object-deltete p {
+    text-align: center;
+}
+
+.delete-object-room {
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.button-red {
+    border: solid 1px #FF5A5E !important;
+    background-color: white !important;
+    color: black !important;
+    margin-bottom: 10px;
+    margin-top: 10px !important;
+}
+
+.delete-object-block {
+    background-color: #383F4F1A;
+}
+
 .object-addres {
     display: flex;
     align-items: center;
@@ -588,8 +616,8 @@ body {
     margin-bottom: 30px;
 }
 .object-room span {
-    max-width: 106px;
-    height: 44px;
+    /* max-width: 106px;
+    height: 44px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -598,6 +626,7 @@ body {
     margin-right: 10px;
     flex: 0 0 30%;
     margin-bottom: 10px;
+    padding: 8px 0px;
 }
 .object-room {
     display: flex;
@@ -823,9 +852,9 @@ body {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: white;
+    /* background-color: white; */
     padding: 10px;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -836,7 +865,7 @@ body {
     margin-bottom: 15px;
     margin-top: 15px;
     background: #FFFFFF;
-    padding: 10px;
+    padding: 16px;
     border-radius: 16px;
     box-shadow: 0 0 0 0.5px #E0E3E8;
 }
@@ -846,28 +875,108 @@ body {
 }
 
 .obj-form-group input::placeholder {
-    color: #A0B5C1 !important;
+    color: #383F4F80 !important;
+}
+
+.first-indicator {
+    border-radius: 20% 0% 0% 20%;
+}
+
+.last-indicator {
+    border-radius: 0% 20% 20% 0%;
+}
+
+/* Общий контейнер */
+.custom-file {
+position: relative;
+display: inline-block;
+max-width: 85px;
+width: 100%;
+height: 80px;
+border: 1px dashed #3498DB; /* Пунктирная голубая рамка */
+background-color: rgba(22, 197, 202, 0.1); /* Голубой фон с прозрачностью */
+border-radius: 10px;
+text-align: center;
+cursor: pointer;
+overflow: hidden;
+}
+
+/* Прячем стандартный input */
+.custom-file input[type="file"] {
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+opacity: 0;
+cursor: pointer;
+z-index: 2;
+}
+
+/* Стили для label */
+.custom-file label {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1;
+}
+
+/* Иконка стрелочки */
+.custom-file label img {
+width: 40px;
+height: 40px;
+opacity: 0.7; /* Немного прозрачная */
+transition: opacity 0.3s;
+}
+
+/* Эффект наведения */
+.custom-file:hover {
+background-color: #EBF5FB; /* Более насыщенный фон при наведении */
+}
+
+.custom-file:hover label img {
+opacity: 1; /* Иконка становится ярче */
 }
 
 .ob-add-kv input::placeholder {
-    color: #A0B5C1 !important;
+    color: #383F4F80 !important;
 }
 
+
+
 .obj-form-group input {
-    height: 48px;
+    /* height: 48px; */
     width: 98%;
     border-radius: 12px;
     background-color: white;
-    border: 1px solid #E4ECF0;
+    border: none;
     outline: none;
     padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+
+
 }
+
+.indicator-object-add {
+    width: 65px !important;
+}
+
+.indicator-object-add.active {
+    width: 65px !important;
+}
+
 
 .obj-button-group button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #00C4CC;
+    background-color: black;
     color: white;
     padding: 15px;
     border: none;
@@ -913,11 +1022,11 @@ body {
 }
 .ob-add-kv input::placeholder {
     color: #607582;
-    font-family: 'Satoshi Regular';
+    font-family: "Nunito", sans-serif;
 }
 .obj-form-group input::placeholder {
     color: #607582;
-    font-family: 'Satoshi Regular';
+    font-family: "Nunito", sans-serif;
 }
 .ob-add-kv input{
     height: 48px;
@@ -925,27 +1034,53 @@ body {
     background-color: white;
     border: 1px solid #E4ECF0;
     outline: none;
-    padding-left: 10px;
+    padding-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+
+
 }
+
+.yours-objects {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.yours-objects-city p {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 19.6px !important;
+    margin-right: 20px;
+
+}
+
 .obj-form-group select {
-    height: 48px;
+    /* height: 48px; */
     border-radius: 12px;
     background-color: white;
-    border: 1px solid #E4ECF0;
+    border: none;
     outline: none;
     width: 100%;
     padding-left: 10px;
     color: black;
-    font-family: 'Satoshi Regular';
+    font-family: "Nunito", sans-serif;
 }
 .obj-add-info {
     margin: 0 auto;
-    width: 235px;
     margin-top: 20px;
-    text-align: center;
+    text-align: justify;
 }
+
+.objec-add-room {
+    border-radius: 12px;
+}
+
+.add-all-room strong {
+    color: red;
+}
+
 .add-all-room {
-    border: solid 1px #16C5CA33;
     border-radius: 12px;
     padding: 10px;
 }
@@ -998,7 +1133,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px;
+    /* padding: 5px; */
+}
+
+.obj-form-full-adress {
+    display: flex;
+}
+
+.obj-form-full-adress svg {
+    margin-right: 5px;
 }
 
 .zakaz-modal-obj-flex {
@@ -1314,8 +1457,34 @@ body {
     flex-direction: column;
 }
 
+.order-inform-head p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    margin-block-start: 0em;
+    margin-block-end: 10px;
+
+}
+
+.obj-form-group-head p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    margin-block-start: 5px;
+    margin-block-end: 10px;
+}
+
+.obj-form-lift {
+    display: flex;
+    justify-content: space-between;
+}
+
+.obj-form-lift div {
+    width: 48%;
+}
+
 .modal-zakaz-object h2 {
-    font-family: 'Satoshi Regular';
+    /* font-family: 'Satoshi Regular'; */
     font-size: 20px !important;
     font-weight: 500 !important;
     line-height: 24px !important;
@@ -2584,7 +2753,7 @@ body {
     padding: 20px;
     position: relative;
     max-height: 500px;
-    height: 90%;
+    height: 95%;
 }
 
 .new-close {
