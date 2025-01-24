@@ -864,7 +864,7 @@ body {
 .obj-form-group {
     margin-bottom: 15px;
     margin-top: 15px;
-    background: #FFFFFF;
+    background: #F6F7F9;
     padding: 16px;
     border-radius: 16px;
     box-shadow: 0 0 0 0.5px #E0E3E8;
@@ -1055,10 +1055,34 @@ opacity: 1; /* Иконка становится ярче */
 
 }
 
+.filters-group-city {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    /* background: #F6F7F9; */
+    /* padding: 16px; */
+    border-radius: 16px;
+    /* box-shadow: 0 0 0 0.5px #E0E3E8; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filters-group-city select {
+    /* height: 48px; */
+    border-radius: 12px;
+    background-color: #F6F7F9;
+    border: 1px solid #E4ECF0;
+    outline: none;
+    width: 85%;
+    padding: 10px 12px;
+    color: #16171DB2;
+    font-family: "Nunito", sans-serif;
+}
+
 .obj-form-group select {
     /* height: 48px; */
     border-radius: 12px;
-    background-color: white;
+    background-color: #F6F7F9;
     border: none;
     outline: none;
     width: 100%;
@@ -1761,6 +1785,7 @@ opacity: 1; /* Иконка становится ярче */
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    margin-bottom: 15px;
 }
 .zakaz-time-and-date {
     margin-top: 20px;
@@ -1800,7 +1825,7 @@ opacity: 1; /* Иконка становится ярче */
 .zakaz-in-timedate input[type="time"] {
     padding-left: 40px; /* Отступ для картинки */
     width: 100%;
-    height: 30px;
+    /* height: 30px; */
     padding: 10px;
     font-size: 16px;
     border: 1px solid #E4ECF0;
@@ -1809,6 +1834,7 @@ opacity: 1; /* Иконка становится ярче */
     background-color: #F6F7F9;
     background-repeat: no-repeat;
     background-position: 130px center;
+    color: #16171DB2;
 }
 
 .zakaz-raiting {
@@ -1826,15 +1852,13 @@ opacity: 1; /* Иконка становится ярче */
     border-radius: 16px;
 }
 
-/* Для инпута с типом "date" */
-.zakaz-in-timedate input[type="date"] {
-    background-image: url('../img/icons (1).png'); /* Путь к вашей иконке календаря */
+/* .zakaz-in-timedate input[type="date"] {
+    background-image: url('../img/icons (1).png'); 
 }
 
-/* Для инпута с типом "time" */
 .zakaz-in-timedate input[type="time"] {
-    background-image: url('../img/icons (2).png'); /* Путь к вашей иконке часов */
-}
+    background-image: url('../img/icons (2).png'); 
+} */
 .zakaz-in-timedate input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
 }
@@ -2185,6 +2209,31 @@ opacity: 1; /* Иконка становится ярче */
   display: flex;
   justify-content: center;
   width: 100%;
+}
+
+.kartochka-zakaza-info {
+    margin-top: 15px;
+}
+
+.kartochka-zakaza-head-block {
+    display: block !important;
+}
+
+.kartochka-zakaza-head {
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.kartochka-zakaza-head span {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.8px;
+    padding: 10px 7px;
+    border-radius: 24px;
+    width: 32%;
+    display: flex;
+    justify-content: center;
+
 }
 
 .gradient-border::before {
@@ -2544,22 +2593,28 @@ opacity: 1; /* Иконка становится ярче */
     /* height: 201px; */
     border-color: white;
     border-radius: 16px;
-    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 0.5px #E0E3E8;
     padding: 10px;
+    background-color: #FFFFFF;
 }
+
+.ispolnitel-buttons-filt svg {
+    margin-right: 5px;
+}
+
 .ispolnitel-buttons-filt {
     display: flex;
     /* align-items: center; */
     justify-content: center;
-    width: 100%;
-    height: 48px;
-    background-color: #F4F7F9;
-    border-radius: 12px;
+    padding: 10px 14px;
+    background-color: black;
+    border-radius: 20px;
 }
 .ispolnitel-buttons-filt a {
     display: flex;
     cursor: pointer;
     align-items: center;
+    color: white;
 }
 .ispolnitel-buttons-filt img {
     margin-right: 5px;
@@ -2748,6 +2803,195 @@ opacity: 1; /* Иконка становится ярче */
     visibility: visible;
 }
 
+.chat-header {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  }
+  
+  .chat-header input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+  }
+  
+  .chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .chat-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 8px 12px;
+    transition: background-color 0.2s ease;
+    border: solid 1px #E0E3E8;
+  }
+  
+  .chat-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  .chat-info {
+    flex: 1;
+  }
+  
+  .chat-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-block-start: 0em;
+      margin-block-end: 0em;
+  }
+  
+  .chat-message {
+    display: -webkit-box; 
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    max-height: calc(1.5em * 2); 
+    font-size: 14px; 
+    color: #555; 
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+  }
+  
+  .chat-time {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .chat-and-meters {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  .avatar-wrapper {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    margin-right: 12px;
+  }
+  
+  .avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  
+  .status-indicator {
+    position: absolute;
+    bottom: 0px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ccc; 
+  }
+  
+  .status-indicator.online {
+    background-color: #4caf50; 
+  }
+
+  .notification-check {
+    width: 10px;
+    height: 10px;
+
+  }
+
+  .index-ispolnitelya-head h1 {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 33.6px;
+  }
+
+  .index-ispolnitelya-head span {
+    background: linear-gradient(180deg, #61A6F2 0%, #8F6FDB 33%, #FF5A5E 66%, #F2C94C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-style: italic;
+  }
+
+  .notification-check.active {
+    background: red;
+    border-radius: 50%;
+  }
+
+  .notification-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    border-bottom :1px solid #E0E3E8;
+  }
+
+  .notification-text h4 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+
+  }
+
+  .notification-text p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    max-width: 250px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #383F4F;
+  }
+
+  .notification-text-and-time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .notification-text-and-time span{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.8px;
+    color: #383F4F;
+  }
+
+  .camera-icon {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    width: 24px !important;
+    height: 24px !important;
+    background-color: #3498DB;
+    border-radius: 50%;
+    padding: 5px;
+    border: solid 1px #FFFFFF;
+    cursor: pointer;
+    z-index: 1001;
+}
+
 .new-modal-content {
     width: 100%;
     padding: 20px;
@@ -2783,7 +3027,7 @@ opacity: 1; /* Иконка становится ярче */
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #00C4CC;
+    background-color: black;
     color: white;
     padding: 15px;
     border: none;
@@ -3013,7 +3257,8 @@ opacity: 1; /* Иконка становится ярче */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #16C5CA1A;
+    background-color: #F6F7F9;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
     border-radius: 16px;
     flex: 0 0 49%;
     margin-bottom: 10px;
@@ -3028,6 +3273,8 @@ opacity: 1; /* Иконка становится ярче */
     position: relative;
     top: 33%;
     left: 0%;
+    display: flex;
+    align-items: end;
 }
 .filters-type-content {
     display: flex;
@@ -3046,6 +3293,41 @@ opacity: 1; /* Иконка становится ярче */
     line-height: 28.8px;
     font-weight: 600;
 }
+
+.filters-adres-input {
+    padding: 15px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+    border-radius: 16px;
+    margin-top: 15px;
+}
+
+.filters-datetime {
+    padding: 15px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+    border-radius: 16px;
+    margin-top: 15px;
+}
+
+.filters-type-clean {
+    padding: 15px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+    border-radius: 16px;
+    margin-top: 15px;
+}
+
+.time-and-date-filters {
+    margin: 0px !important;
+    padding: 0px !important;
+    box-shadow: none !important;
+}
+
+.filters-type-clean {
+    padding: 15px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+    border-radius: 16px;
+    margin-top: 15px;
+}
+
 .filters-adres-input span{
     font-size: 14px;
     line-height: 16.8px;
@@ -3060,6 +3342,7 @@ opacity: 1; /* Иконка становится ярче */
     font-size: 14px;
     line-height: 16.8px;
     font-weight: 700;
+    color: black;
 }
 .c-city h1 {
     margin-block-start: 0em;
@@ -3068,6 +3351,7 @@ opacity: 1; /* Иконка становится ярче */
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.02em;
+    white-space: nowrap;
     
 }
 #profile-head {
@@ -3431,7 +3715,7 @@ opacity: 1; /* Иконка становится ярче */
     display: flex;
     white-space: nowrap;
     align-items: center;
-    background-color: #F4F7F9;
+    background-color: white;
     border-radius: 100px;
     /* border: 1px solid; */
     padding: 7px;
@@ -3442,8 +3726,14 @@ opacity: 1; /* Иконка становится ярче */
     background-color: #333333;
     color: #FFFFFF;
 }
+
+.zakazi-slidebar-block.active span  {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
 .zakazi-slidebar-block span{
-    color: #A0B5C1;
+    color: black;
 }
 
 .lichnaya-slidebar-block p {
@@ -3485,6 +3775,9 @@ opacity: 1; /* Иконка становится ярче */
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
+    background: white;
+    border-radius: 50px;
+    margin-top: 30px;
 }
 .zakazi-isp-card-z {
     margin-top: 30px;
@@ -3497,8 +3790,70 @@ opacity: 1; /* Иконка становится ярче */
     font-weight: 500;
     line-height: 22.4px;
     letter-spacing: -0.02em;
+}
+
+.zakaz-offer-cleaning {
+    background-color: #F6F7F9 !important;
+    margin-top: 20px;
+}
+
+.ispolnitel-button-reply {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-go-to-chat  {
 
 }
+
+.kartochka-zakaza-vipolniteli h4 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 19.8px;
+
+}
+
+.kartochka-vip-butt {
+    display: block !important;
+}
+
+.white-background {
+    background-color: white !important;
+}
+
+.tags-new-zak {
+    background-color: #D9F1E3 !important;
+    color: #27AE60 !important;
+    white-space: nowrap;
+}
+
+.tags-vipoln-zak {
+    background-color: #EBF5FB !important;
+    color: #3498DB !important;
+    white-space: nowrap;
+}
+
+.tags-ozhidaet-zak {
+    background-color: #E6F9FA !important;
+    color: #00C4CC !important;
+    white-space: nowrap;
+}
+
+.ispol-index-card {
+    display: block !important;
+}
+
+.button-reply-flex {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 10px 14px;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
+    width: 70%;
+}
+
 .isp-zakaz-tags span{
     padding: 10px 7px;
     background-color: #F4F7F9;
@@ -3553,8 +3908,8 @@ opacity: 1; /* Иконка становится ярче */
 }
 
 .kart-img-block img {
-    width: 100%;
-    height: 160px;
+    width: 95%;
+    height: 100px;
     border-radius: 12px;
 }
 
@@ -3562,11 +3917,14 @@ opacity: 1; /* Иконка становится ярче */
     max-width: 146px;
     border-radius: 12px;
     margin-right: 10px;
-    height: 160px;
+    /* height: 160px; */
 }
 .kart-img-slider-main {
     display: flex;
     padding-top: 10px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 16px;
 }
 .kartochka-img-slider span{
     font-size: 12px;

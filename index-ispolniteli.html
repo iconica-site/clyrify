@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница (исполнитель)</title>
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marck+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div class="index-center">
+        <div class="index-content">
+            <div class="city-buttons">
+                <div class="c-city">
+                    <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="20" fill="#E0E3E8"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 12.8335C16.483 12.8335 13.5 15.7399 13.5 19.284C13.5 21.099 14.2679 22.6162 15.3446 23.8685C16.4166 25.1153 17.8122 26.1209 19.1188 26.9298L19.1274 26.9351L19.1362 26.94C19.3997 27.0888 19.6974 27.1668 20 27.1668C20.3026 27.1668 20.6003 27.0888 20.8638 26.94L20.8715 26.9357L20.879 26.9311C22.1903 26.1287 23.5862 25.1199 24.6578 23.8693C25.7335 22.6139 26.5 21.093 26.5 19.284C26.5 15.7399 23.517 12.8335 20 12.8335ZM20 16.6668C18.5272 16.6668 17.3333 17.8607 17.3333 19.3335C17.3333 20.8063 18.5272 22.0002 20 22.0002C21.4728 22.0002 22.6667 20.8063 22.6667 19.3335C22.6667 17.8607 21.4728 16.6668 20 16.6668Z" fill="#16171D"/>
+                    </svg>
+                    <div class="c-city-title-hello">
+                        <div class="title-hello">
+                            Привет, Вон
+                        </div>
+                        <a href="#" id="open-modal">
+                            Saint Petersburg
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                                <path d="M12 6.50003C12 6.50003 9.05404 10.5 7.99997 10.5C6.94589 10.5 4 6.5 4 6.5" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="c-buttons">
+                    <a>
+                        <div class="icon-wrapper">
+                            <div class="icon-border-favor">
+                                <svg style="margin-top: 3px;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M3.27256 7.73064C3.27259 4.03443 6.28617 1.0415 9.99935 1.0415C13.7125 1.0415 16.7261 4.03446 16.7261 7.73069C16.7262 8.59049 16.784 9.23932 17.1805 9.82256C17.3313 10.0413 17.6171 10.4112 17.8074 10.7086C18.0206 11.0418 18.2289 11.4435 18.3005 11.9117C18.534 13.439 17.4572 14.4279 16.3848 14.871C12.6075 16.4317 7.39115 16.4317 3.6139 14.871C2.54148 14.4279 1.46465 13.439 1.69825 11.9117C1.76984 11.4435 1.97812 11.0417 2.19129 10.7086C2.38162 10.4111 2.66742 10.0412 2.81827 9.82249C3.21467 9.23928 3.27249 8.59038 3.27256 7.73064Z" fill="#16171D"/>
+                                    <path d="M12.3147 18.2926C11.6452 18.7136 10.8489 18.9564 9.99872 18.9564C9.1485 18.9564 8.35227 18.7136 7.68278 18.2926C7.08858 17.9189 6.79148 17.732 6.89545 17.4214C6.99942 17.1108 7.40938 17.1456 8.22932 17.2152C9.40197 17.3147 10.5955 17.3147 11.7681 17.2152C12.5881 17.1456 12.998 17.1108 13.102 17.4214C13.206 17.732 12.9089 17.9189 12.3147 18.2926Z" fill="#16171D"/>
+                                </svg>
+                            </div>
+                            <nav class="unread-count-new">8</nav>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="overlay" id="overlay"></div>
+
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <span class="close" id="close-modal">&times;</span>
+                    <h2>Где искать специалистов</h2>
+                    <input type="text" id="city-input" placeholder="Город или регион">
+                    <div class="search-city">
+                        <div class="s-city-block">
+                            <p>Москва</p>
+                            <span>Московская область</span>
+                        </div>
+                        <div class="s-city-block">
+                            <p>Москва</p>
+                            <span>Московская область</span>
+                        </div>
+                        <div class="s-city-block">
+                            <p>Москва</p>
+                            <span>Московская область</span>
+                        </div>
+                        <div class="s-city-block">
+                            <p>Москва</p>
+                            <span>Московская область</span>
+                        </div>
+                        <div class="s-city-block">
+                            <p>Москва</p>
+                            <span>Московская область</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="index-ispolnitelya-head">
+                <h1>Поиск для <span>Специалистов</span></h1>
+            </div>
+
+            <div class="ispolnitel-filters">
+                <div class="filters-inp">
+                    <div class="filters-group-city">
+                        <select>
+                            <option>Город</option>
+                            <option>Город1</option>
+                            <option>Город2</option>
+                            <option>Город3</option>
+                            <option>Город4</option>
+                        </select>
+                        <button class="settings-button">
+                            <i class="settings-icon"></i>
+                        </button>
+                    </div>
+                    <div class="zakaz-in-timedate">
+                        <input type="date" placeholder="Дата">
+                        <input type="time" placeholder="Время">
+                    </div>
+                    <div class="ispolnitel-buttons-filt">
+                        <a class="open-filters-modal">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                <path d="M12.166 11.667L15.166 14.667" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M13.832 7.3335C13.832 4.01979 11.1457 1.3335 7.83203 1.3335C4.51832 1.3335 1.83203 4.01979 1.83203 7.3335C1.83203 10.6472 4.51832 13.3335 7.83203 13.3335C11.1457 13.3335 13.832 10.6472 13.832 7.3335Z" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                            Поиск</a>
+                    </div>
+                </div>
+                    <div class="ispolnitel-new-zakaz">
+                        <div class="povtor-head">
+                            <h2><span class="title-type-clean-span">Заказы</span> для вас</h2>
+                        </div>
+                        <div class="news-zakaz-block">
+                            <div class="isp-zakaz-tags">
+                                <div class="zakaz-tags-number">
+                                    <span class="tags-new-zak">Выполнен</span>
+                                    <div class="gradient-border" style="padding: 0px;">
+                                        <span class="order-number-zak">Заказ №987123</span>
+                                    </div>
+                                </div>
+                                <p>$ 150</p>
+                            </div>
+                            <div class="news-zakaz-head">
+                                <div class="news-zakaz-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.833496C4.48301 0.833496 1.5 3.73986 1.5 7.28401C1.5 9.09898 2.26791 10.6162 3.34459 11.8685C4.41664 13.1153 5.81223 14.1209 7.11883 14.9298L7.12742 14.9351L7.13621 14.94C7.3997 15.0888 7.69736 15.1668 8 15.1668C8.30264 15.1668 8.6003 15.0888 8.86379 14.94L8.87146 14.9357L8.87897 14.9311C10.1903 14.1287 11.5862 13.1199 12.6578 11.8693C13.7335 10.6139 14.5 9.09298 14.5 7.28401C14.5 3.73986 11.517 0.833496 8 0.833496ZM8 4.66683C6.52724 4.66683 5.33333 5.86074 5.33333 7.3335C5.33333 8.80626 6.52724 10.0002 8 10.0002C9.47276 10.0002 10.6667 8.80626 10.6667 7.3335C10.6667 5.86074 9.47276 4.66683 8 4.66683Z" fill="#383F4F"></path>
+                                    </svg>
+                                    <p>Нарвская 11/3</p>
+                                </div>
+                                <svg class="object-open-delete-popup" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.99401 8H8" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.98913 12H7.99512" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.99987 4H8.00586" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> 
+                            </div>
+                            <div class="pov-bl-date">
+                                <div class="pov-bl-left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                        <path d="M12.25 6.33317H1.75M9.33333 1.6665V3.99984M4.66667 1.6665V3.99984M4.55 13.3332H9.45C10.4301 13.3332 10.9201 13.3332 11.2945 13.1424C11.6238 12.9747 11.8915 12.7069 12.0593 12.3777C12.25 12.0033 12.25 11.5133 12.25 10.5332V5.63317C12.25 4.65308 12.25 4.16303 12.0593 3.78869C11.8915 3.4594 11.6238 3.19169 11.2945 3.02391C10.9201 2.83317 10.4301 2.83317 9.45 2.83317H4.55C3.56991 2.83317 3.07986 2.83317 2.70552 3.02391C2.37623 3.19169 2.10852 3.4594 1.94074 3.78869C1.75 4.16303 1.75 4.65308 1.75 5.63317V10.5332C1.75 11.5133 1.75 12.0033 1.94074 12.3777C2.10852 12.7069 2.37623 12.9747 2.70552 13.1424C3.07986 13.3332 3.56991 13.3332 4.55 13.3332Z" stroke="#383F4F" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>Sep 16, 2024</span>
+                                </div>
+                                <div class="pov-bl-right">
+                                    <span>General</span>
+                                </div>
+                            </div>
+                            <div class="pov-bl-dop news-zakaz-bl-dop">
+                                <div class="pov-bl-dop-sp-p">
+                                    <span>Дополнительно:</span>
+                                    <p>Мойка остекления балкона  
+                                        Мойка остекления балкона 
+                                    </p>
+                                </div>
+                                <img src="img/Rectangle 30 (1).png">
+                            </div>
+                            <div class="pov-border"></div>
+                            <div class="pov-bl-tags ispol-index-card">
+                                <div class="ispolnitel-button-reply">
+                                    <div class="button-reply-flex open-new-modal">
+                                        <a>Оставить отклик</a>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" fill="#F6F7F9"/>
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" stroke="#E0E3E8" stroke-width="0.714286"/>
+                                        <path d="M27.1076 12.375C24.5536 10.8084 22.3245 11.4398 20.9855 12.4454C20.4364 12.8577 20.1619 13.0639 20.0004 13.0639C19.8389 13.0639 19.5643 12.8577 19.0153 12.4454C17.6762 11.4398 15.4471 10.8084 12.8932 12.375C9.54139 14.431 8.78296 21.2138 16.5142 26.9362C17.9868 28.0261 18.7231 28.5711 20.0004 28.5711C21.2777 28.5711 22.014 28.0261 23.4865 26.9362C31.2178 21.2138 30.4594 14.431 27.1076 12.375Z" stroke="#383F4F" stroke-width="1.78571" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="news-zakaz-block">
+                            <div class="isp-zakaz-tags">
+                                <div class="zakaz-tags-number">
+                                    <span class="tags-new-zak">Выполнен</span>
+                                    <div class="gradient-border" style="padding: 0px;">
+                                        <span class="order-number-zak">Заказ №987123</span>
+                                    </div>
+                                </div>
+                                <p>$ 150</p>
+                            </div>
+                            <div class="news-zakaz-head">
+                                <div class="news-zakaz-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.833496C4.48301 0.833496 1.5 3.73986 1.5 7.28401C1.5 9.09898 2.26791 10.6162 3.34459 11.8685C4.41664 13.1153 5.81223 14.1209 7.11883 14.9298L7.12742 14.9351L7.13621 14.94C7.3997 15.0888 7.69736 15.1668 8 15.1668C8.30264 15.1668 8.6003 15.0888 8.86379 14.94L8.87146 14.9357L8.87897 14.9311C10.1903 14.1287 11.5862 13.1199 12.6578 11.8693C13.7335 10.6139 14.5 9.09298 14.5 7.28401C14.5 3.73986 11.517 0.833496 8 0.833496ZM8 4.66683C6.52724 4.66683 5.33333 5.86074 5.33333 7.3335C5.33333 8.80626 6.52724 10.0002 8 10.0002C9.47276 10.0002 10.6667 8.80626 10.6667 7.3335C10.6667 5.86074 9.47276 4.66683 8 4.66683Z" fill="#383F4F"></path>
+                                    </svg>
+                                    <p>Нарвская 11/3</p>
+                                </div>
+                                <svg class="object-open-delete-popup" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.99401 8H8" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.98913 12H7.99512" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.99987 4H8.00586" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> 
+                            </div>
+                            <div class="pov-bl-date">
+                                <div class="pov-bl-left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                        <path d="M12.25 6.33317H1.75M9.33333 1.6665V3.99984M4.66667 1.6665V3.99984M4.55 13.3332H9.45C10.4301 13.3332 10.9201 13.3332 11.2945 13.1424C11.6238 12.9747 11.8915 12.7069 12.0593 12.3777C12.25 12.0033 12.25 11.5133 12.25 10.5332V5.63317C12.25 4.65308 12.25 4.16303 12.0593 3.78869C11.8915 3.4594 11.6238 3.19169 11.2945 3.02391C10.9201 2.83317 10.4301 2.83317 9.45 2.83317H4.55C3.56991 2.83317 3.07986 2.83317 2.70552 3.02391C2.37623 3.19169 2.10852 3.4594 1.94074 3.78869C1.75 4.16303 1.75 4.65308 1.75 5.63317V10.5332C1.75 11.5133 1.75 12.0033 1.94074 12.3777C2.10852 12.7069 2.37623 12.9747 2.70552 13.1424C3.07986 13.3332 3.56991 13.3332 4.55 13.3332Z" stroke="#383F4F" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>Sep 16, 2024</span>
+                                </div>
+                                <div class="pov-bl-right">
+                                    <span>General</span>
+                                </div>
+                            </div>
+                            <div class="pov-bl-dop news-zakaz-bl-dop">
+                                <div class="pov-bl-dop-sp-p">
+                                    <span>Дополнительно:</span>
+                                    <p>Мойка остекления балкона  
+                                        Мойка остекления балкона 
+                                    </p>
+                                </div>
+                                <img src="img/Rectangle 30 (1).png">
+                            </div>
+                            <div class="pov-border"></div>
+                            <div class="pov-bl-tags ispol-index-card">
+                                <div class="ispolnitel-button-reply">
+                                    <div class="button-reply-flex open-new-modal">
+                                        <a>Оставить отклик</a>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" fill="#F6F7F9"/>
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" stroke="#E0E3E8" stroke-width="0.714286"/>
+                                        <path d="M27.1076 12.375C24.5536 10.8084 22.3245 11.4398 20.9855 12.4454C20.4364 12.8577 20.1619 13.0639 20.0004 13.0639C19.8389 13.0639 19.5643 12.8577 19.0153 12.4454C17.6762 11.4398 15.4471 10.8084 12.8932 12.375C9.54139 14.431 8.78296 21.2138 16.5142 26.9362C17.9868 28.0261 18.7231 28.5711 20.0004 28.5711C21.2777 28.5711 22.014 28.0261 23.4865 26.9362C31.2178 21.2138 30.4594 14.431 27.1076 12.375Z" stroke="#383F4F" stroke-width="1.78571" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="news-zakaz-block">
+                            <div class="isp-zakaz-tags">
+                                <div class="zakaz-tags-number">
+                                    <span class="tags-new-zak">Выполнен</span>
+                                    <div class="gradient-border" style="padding: 0px;">
+                                        <span class="order-number-zak">Заказ №987123</span>
+                                    </div>
+                                </div>
+                                <p>$ 150</p>
+                            </div>
+                            <div class="news-zakaz-head">
+                                <div class="news-zakaz-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.833496C4.48301 0.833496 1.5 3.73986 1.5 7.28401C1.5 9.09898 2.26791 10.6162 3.34459 11.8685C4.41664 13.1153 5.81223 14.1209 7.11883 14.9298L7.12742 14.9351L7.13621 14.94C7.3997 15.0888 7.69736 15.1668 8 15.1668C8.30264 15.1668 8.6003 15.0888 8.86379 14.94L8.87146 14.9357L8.87897 14.9311C10.1903 14.1287 11.5862 13.1199 12.6578 11.8693C13.7335 10.6139 14.5 9.09298 14.5 7.28401C14.5 3.73986 11.517 0.833496 8 0.833496ZM8 4.66683C6.52724 4.66683 5.33333 5.86074 5.33333 7.3335C5.33333 8.80626 6.52724 10.0002 8 10.0002C9.47276 10.0002 10.6667 8.80626 10.6667 7.3335C10.6667 5.86074 9.47276 4.66683 8 4.66683Z" fill="#383F4F"></path>
+                                    </svg>
+                                    <p>Нарвская 11/3</p>
+                                </div>
+                                <svg class="object-open-delete-popup" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.99401 8H8" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.98913 12H7.99512" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.99987 4H8.00586" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> 
+                            </div>
+                            <div class="pov-bl-date">
+                                <div class="pov-bl-left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                        <path d="M12.25 6.33317H1.75M9.33333 1.6665V3.99984M4.66667 1.6665V3.99984M4.55 13.3332H9.45C10.4301 13.3332 10.9201 13.3332 11.2945 13.1424C11.6238 12.9747 11.8915 12.7069 12.0593 12.3777C12.25 12.0033 12.25 11.5133 12.25 10.5332V5.63317C12.25 4.65308 12.25 4.16303 12.0593 3.78869C11.8915 3.4594 11.6238 3.19169 11.2945 3.02391C10.9201 2.83317 10.4301 2.83317 9.45 2.83317H4.55C3.56991 2.83317 3.07986 2.83317 2.70552 3.02391C2.37623 3.19169 2.10852 3.4594 1.94074 3.78869C1.75 4.16303 1.75 4.65308 1.75 5.63317V10.5332C1.75 11.5133 1.75 12.0033 1.94074 12.3777C2.10852 12.7069 2.37623 12.9747 2.70552 13.1424C3.07986 13.3332 3.56991 13.3332 4.55 13.3332Z" stroke="#383F4F" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>Sep 16, 2024</span>
+                                </div>
+                                <div class="pov-bl-right">
+                                    <span>General</span>
+                                </div>
+                            </div>
+                            <div class="pov-bl-dop news-zakaz-bl-dop">
+                                <div class="pov-bl-dop-sp-p">
+                                    <span>Дополнительно:</span>
+                                    <p>Мойка остекления балкона  
+                                        Мойка остекления балкона 
+                                    </p>
+                                </div>
+                                <img src="img/Rectangle 30 (1).png">
+                            </div>
+                            <div class="pov-border"></div>
+                            <div class="pov-bl-tags ispol-index-card">
+                                <div class="ispolnitel-button-reply">
+                                    <div class="button-reply-flex open-new-modal">
+                                        <a>Оставить отклик</a>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" fill="#F6F7F9"/>
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" stroke="#E0E3E8" stroke-width="0.714286"/>
+                                        <path d="M27.1076 12.375C24.5536 10.8084 22.3245 11.4398 20.9855 12.4454C20.4364 12.8577 20.1619 13.0639 20.0004 13.0639C19.8389 13.0639 19.5643 12.8577 19.0153 12.4454C17.6762 11.4398 15.4471 10.8084 12.8932 12.375C9.54139 14.431 8.78296 21.2138 16.5142 26.9362C17.9868 28.0261 18.7231 28.5711 20.0004 28.5711C21.2777 28.5711 22.014 28.0261 23.4865 26.9362C31.2178 21.2138 30.4594 14.431 27.1076 12.375Z" stroke="#383F4F" stroke-width="1.78571" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="news-zakaz-block">
+                            <div class="isp-zakaz-tags">
+                                <div class="zakaz-tags-number">
+                                    <span class="tags-new-zak">Выполнен</span>
+                                    <div class="gradient-border" style="padding: 0px;">
+                                        <span class="order-number-zak">Заказ №987123</span>
+                                    </div>
+                                </div>
+                                <p>$ 150</p>
+                            </div>
+                            <div class="news-zakaz-head">
+                                <div class="news-zakaz-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.833496C4.48301 0.833496 1.5 3.73986 1.5 7.28401C1.5 9.09898 2.26791 10.6162 3.34459 11.8685C4.41664 13.1153 5.81223 14.1209 7.11883 14.9298L7.12742 14.9351L7.13621 14.94C7.3997 15.0888 7.69736 15.1668 8 15.1668C8.30264 15.1668 8.6003 15.0888 8.86379 14.94L8.87146 14.9357L8.87897 14.9311C10.1903 14.1287 11.5862 13.1199 12.6578 11.8693C13.7335 10.6139 14.5 9.09298 14.5 7.28401C14.5 3.73986 11.517 0.833496 8 0.833496ZM8 4.66683C6.52724 4.66683 5.33333 5.86074 5.33333 7.3335C5.33333 8.80626 6.52724 10.0002 8 10.0002C9.47276 10.0002 10.6667 8.80626 10.6667 7.3335C10.6667 5.86074 9.47276 4.66683 8 4.66683Z" fill="#383F4F"></path>
+                                    </svg>
+                                    <p>Нарвская 11/3</p>
+                                </div>
+                                <svg class="object-open-delete-popup" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.99401 8H8" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.98913 12H7.99512" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.99987 4H8.00586" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> 
+                            </div>
+                            <div class="pov-bl-date">
+                                <div class="pov-bl-left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                        <path d="M12.25 6.33317H1.75M9.33333 1.6665V3.99984M4.66667 1.6665V3.99984M4.55 13.3332H9.45C10.4301 13.3332 10.9201 13.3332 11.2945 13.1424C11.6238 12.9747 11.8915 12.7069 12.0593 12.3777C12.25 12.0033 12.25 11.5133 12.25 10.5332V5.63317C12.25 4.65308 12.25 4.16303 12.0593 3.78869C11.8915 3.4594 11.6238 3.19169 11.2945 3.02391C10.9201 2.83317 10.4301 2.83317 9.45 2.83317H4.55C3.56991 2.83317 3.07986 2.83317 2.70552 3.02391C2.37623 3.19169 2.10852 3.4594 1.94074 3.78869C1.75 4.16303 1.75 4.65308 1.75 5.63317V10.5332C1.75 11.5133 1.75 12.0033 1.94074 12.3777C2.10852 12.7069 2.37623 12.9747 2.70552 13.1424C3.07986 13.3332 3.56991 13.3332 4.55 13.3332Z" stroke="#383F4F" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>Sep 16, 2024</span>
+                                </div>
+                                <div class="pov-bl-right">
+                                    <span>General</span>
+                                </div>
+                            </div>
+                            <div class="pov-bl-dop news-zakaz-bl-dop">
+                                <div class="pov-bl-dop-sp-p">
+                                    <span>Дополнительно:</span>
+                                    <p>Мойка остекления балкона  
+                                        Мойка остекления балкона 
+                                    </p>
+                                </div>
+                                <img src="img/Rectangle 30 (1).png">
+                            </div>
+                            <div class="pov-border"></div>
+                            <div class="pov-bl-tags ispol-index-card">
+                                <div class="ispolnitel-button-reply">
+                                    <div class="button-reply-flex open-new-modal">
+                                        <a>Оставить отклик</a>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" fill="#F6F7F9"/>
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" stroke="#E0E3E8" stroke-width="0.714286"/>
+                                        <path d="M27.1076 12.375C24.5536 10.8084 22.3245 11.4398 20.9855 12.4454C20.4364 12.8577 20.1619 13.0639 20.0004 13.0639C19.8389 13.0639 19.5643 12.8577 19.0153 12.4454C17.6762 11.4398 15.4471 10.8084 12.8932 12.375C9.54139 14.431 8.78296 21.2138 16.5142 26.9362C17.9868 28.0261 18.7231 28.5711 20.0004 28.5711C21.2777 28.5711 22.014 28.0261 23.4865 26.9362C31.2178 21.2138 30.4594 14.431 27.1076 12.375Z" stroke="#383F4F" stroke-width="1.78571" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="news-zakaz-block">
+                            <div class="isp-zakaz-tags">
+                                <div class="zakaz-tags-number">
+                                    <span class="tags-new-zak">Выполнен</span>
+                                    <div class="gradient-border" style="padding: 0px;">
+                                        <span class="order-number-zak">Заказ №987123</span>
+                                    </div>
+                                </div>
+                                <p>$ 150</p>
+                            </div>
+                            <div class="news-zakaz-head">
+                                <div class="news-zakaz-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.833496C4.48301 0.833496 1.5 3.73986 1.5 7.28401C1.5 9.09898 2.26791 10.6162 3.34459 11.8685C4.41664 13.1153 5.81223 14.1209 7.11883 14.9298L7.12742 14.9351L7.13621 14.94C7.3997 15.0888 7.69736 15.1668 8 15.1668C8.30264 15.1668 8.6003 15.0888 8.86379 14.94L8.87146 14.9357L8.87897 14.9311C10.1903 14.1287 11.5862 13.1199 12.6578 11.8693C13.7335 10.6139 14.5 9.09298 14.5 7.28401C14.5 3.73986 11.517 0.833496 8 0.833496ZM8 4.66683C6.52724 4.66683 5.33333 5.86074 5.33333 7.3335C5.33333 8.80626 6.52724 10.0002 8 10.0002C9.47276 10.0002 10.6667 8.80626 10.6667 7.3335C10.6667 5.86074 9.47276 4.66683 8 4.66683Z" fill="#383F4F"></path>
+                                    </svg>
+                                    <p>Нарвская 11/3</p>
+                                </div>
+                                <svg class="object-open-delete-popup" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.99401 8H8" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.98913 12H7.99512" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.99987 4H8.00586" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> 
+                            </div>
+                            <div class="pov-bl-date">
+                                <div class="pov-bl-left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                        <path d="M12.25 6.33317H1.75M9.33333 1.6665V3.99984M4.66667 1.6665V3.99984M4.55 13.3332H9.45C10.4301 13.3332 10.9201 13.3332 11.2945 13.1424C11.6238 12.9747 11.8915 12.7069 12.0593 12.3777C12.25 12.0033 12.25 11.5133 12.25 10.5332V5.63317C12.25 4.65308 12.25 4.16303 12.0593 3.78869C11.8915 3.4594 11.6238 3.19169 11.2945 3.02391C10.9201 2.83317 10.4301 2.83317 9.45 2.83317H4.55C3.56991 2.83317 3.07986 2.83317 2.70552 3.02391C2.37623 3.19169 2.10852 3.4594 1.94074 3.78869C1.75 4.16303 1.75 4.65308 1.75 5.63317V10.5332C1.75 11.5133 1.75 12.0033 1.94074 12.3777C2.10852 12.7069 2.37623 12.9747 2.70552 13.1424C3.07986 13.3332 3.56991 13.3332 4.55 13.3332Z" stroke="#383F4F" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>Sep 16, 2024</span>
+                                </div>
+                                <div class="pov-bl-right">
+                                    <span>General</span>
+                                </div>
+                            </div>
+                            <div class="pov-bl-dop news-zakaz-bl-dop">
+                                <div class="pov-bl-dop-sp-p">
+                                    <span>Дополнительно:</span>
+                                    <p>Мойка остекления балкона  
+                                        Мойка остекления балкона 
+                                    </p>
+                                </div>
+                                <img src="img/Rectangle 30 (1).png">
+                            </div>
+                            <div class="pov-border"></div>
+                            <div class="pov-bl-tags ispol-index-card">
+                                <div class="ispolnitel-button-reply">
+                                    <div class="button-reply-flex open-new-modal">
+                                        <a>Оставить отклик</a>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" fill="#F6F7F9"/>
+                                        <rect x="0.357143" y="0.357143" width="39.2857" height="39.2857" rx="19.6429" stroke="#E0E3E8" stroke-width="0.714286"/>
+                                        <path d="M27.1076 12.375C24.5536 10.8084 22.3245 11.4398 20.9855 12.4454C20.4364 12.8577 20.1619 13.0639 20.0004 13.0639C19.8389 13.0639 19.5643 12.8577 19.0153 12.4454C17.6762 11.4398 15.4471 10.8084 12.8932 12.375C9.54139 14.431 8.78296 21.2138 16.5142 26.9362C17.9868 28.0261 18.7231 28.5711 20.0004 28.5711C21.2777 28.5711 22.014 28.0261 23.4865 26.9362C31.2178 21.2138 30.4594 14.431 27.1076 12.375Z" stroke="#383F4F" stroke-width="1.78571" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="new-overlay" id="new-overlay"></div>
+
+                    <div class="new-modal" id="new-modal">
+                        <div class="new-modal-content">
+                            <span class="new-close" id="new-close-modal">&times;</span>
+                            <div class="news-zakaz-block zakaz-offer-cleaning">
+                                <div class="isp-zakaz-tags">
+                                    <div class="zakaz-tags-number">
+                                        <span class="tags-new-zak" id="success-message" style="display: none;">Отклик доставлен</span>
+                                        <div class="gradient-border" style="padding: 0px;">
+                                            <span class="order-number-zak">Заказ №987123</span>
+                                        </div>
+                                    </div>
+                                    <p>$ 150</p>
+                                </div>
+                                <div class="news-zakaz-head">
+                                    <div class="news-zakaz-location">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.833496C4.48301 0.833496 1.5 3.73986 1.5 7.28401C1.5 9.09898 2.26791 10.6162 3.34459 11.8685C4.41664 13.1153 5.81223 14.1209 7.11883 14.9298L7.12742 14.9351L7.13621 14.94C7.3997 15.0888 7.69736 15.1668 8 15.1668C8.30264 15.1668 8.6003 15.0888 8.86379 14.94L8.87146 14.9357L8.87897 14.9311C10.1903 14.1287 11.5862 13.1199 12.6578 11.8693C13.7335 10.6139 14.5 9.09298 14.5 7.28401C14.5 3.73986 11.517 0.833496 8 0.833496ZM8 4.66683C6.52724 4.66683 5.33333 5.86074 5.33333 7.3335C5.33333 8.80626 6.52724 10.0002 8 10.0002C9.47276 10.0002 10.6667 8.80626 10.6667 7.3335C10.6667 5.86074 9.47276 4.66683 8 4.66683Z" fill="#383F4F"></path>
+                                        </svg>
+                                        <p>Нарвская 11/3</p>
+                                    </div>
+                                    <svg class="object-open-delete-popup" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M7.99401 8H8" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.98913 12H7.99512" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M7.99987 4H8.00586" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> 
+                                </div>
+                                <div class="pov-bl-date">
+                                    <div class="pov-bl-left">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                            <path d="M12.25 6.33317H1.75M9.33333 1.6665V3.99984M4.66667 1.6665V3.99984M4.55 13.3332H9.45C10.4301 13.3332 10.9201 13.3332 11.2945 13.1424C11.6238 12.9747 11.8915 12.7069 12.0593 12.3777C12.25 12.0033 12.25 11.5133 12.25 10.5332V5.63317C12.25 4.65308 12.25 4.16303 12.0593 3.78869C11.8915 3.4594 11.6238 3.19169 11.2945 3.02391C10.9201 2.83317 10.4301 2.83317 9.45 2.83317H4.55C3.56991 2.83317 3.07986 2.83317 2.70552 3.02391C2.37623 3.19169 2.10852 3.4594 1.94074 3.78869C1.75 4.16303 1.75 4.65308 1.75 5.63317V10.5332C1.75 11.5133 1.75 12.0033 1.94074 12.3777C2.10852 12.7069 2.37623 12.9747 2.70552 13.1424C3.07986 13.3332 3.56991 13.3332 4.55 13.3332Z" stroke="#383F4F" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg>
+                                        <span>Sep 16, 2024</span>
+                                    </div>
+                                    <div class="pov-bl-right">
+                                        <span>General</span>
+                                    </div>
+                                </div>
+                                <div class="pov-bl-dop news-zakaz-bl-dop">
+                                    <div class="pov-bl-dop-sp-p">
+                                        <span>Комментарий:</span>
+                                        <p>
+                                            Позвонить у шлагбаума
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                             <div class="new-modal-button-group">
+                                <button type="button" id="propose-cleaning-btn">Предложить уборку</button>
+                                <button type="button" id="go-to-chat-btn" style="display: none;">Перейти в чат</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filters-overlay" id="filters-overlay"></div>
+
+                    <div class="filters-modal" id="filters-modal">
+                        <div class="filters-modal-content">
+                            <span class="filters-close" id="filters-close-modal">&times;</span>
+                            <div class="filters-modal-head">
+                                <h2>Фильтр</h2>
+                            </div>
+                            <div class="filters-adres-input">
+                                <span>Адрес</span>
+                                <div class="obj-form-group">
+                                    <select>
+                                        <option>Город</option>
+                                        <option>Город1</option>
+                                        <option>Город2</option>
+                                        <option>Город3</option>
+                                        <option>Город4</option>
+                                    </select>
+                                </div>
+                                <div class="obj-form-group">
+                                    <select>
+                                        <option>Район</option>
+                                        <option>Город12</option>
+                                        <option>Город23</option>
+                                        <option>Город34</option>
+                                        <option>Город45</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="filters-datetime">
+                                <span>Время уборки</span>
+                                <div class="zakaz-time-and-date time-and-date-filters">
+                                    <div class="zakaz-in-timedate">
+                                        <input type="date" placeholder="Дата">
+                                        <input type="time" placeholder="Время">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filters-type-clean">
+                                <span>Тип уборки</span>
+                                <div class="filters-type-content">
+                                    <div class="filters-type-block">
+                                        <div class="filt-span-flex">
+                                            <input type="checkbox">
+                                            <span>Все включено</span>
+                                        </div>
+                                        <div class="filt-img-flex">
+                                            <img src="img/info.png">
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div class="filt-span-flex">
+                                            <input type="checkbox">
+                                            <span>Все включено</span>
+                                        </div>
+                                        <div class="filt-img-flex">
+                                            <img src="img/info.png">
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div class="filt-span-flex">
+                                            <input type="checkbox">
+                                            <span>Все включено</span>
+                                        </div>
+                                        <div class="filt-img-flex">
+                                            <img src="img/info.png">
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div class="filt-span-flex">
+                                            <input type="checkbox">
+                                            <span>Все включено</span>
+                                        </div>
+                                        <div class="filt-img-flex">
+                                            <img src="img/info.png">
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div class="filt-span-flex">
+                                            <input type="checkbox">
+                                            <span>Все включено</span>
+                                        </div>
+                                        <div class="filt-img-flex">
+                                            <img src="img/info.png">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filters-type-clean">
+                                <span>Тип помещения</span>
+                                <div class="filters-type-content">
+                                    <div class="filters-type-block">
+                                        <div>
+                                            <input type="checkbox">
+                                            <span>Любое</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div>
+                                            <input type="checkbox">
+                                            <span>Квартира</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div>
+                                            <input type="checkbox">
+                                            <span>Дом</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div>
+                                            <input type="checkbox">
+                                            <span>Комната</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="filters-type-block">
+                                        <div>
+                                            <input type="checkbox">
+                                            <span>Офис</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="new-modal-button-group">
+                                <button type="button">Найти</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+            <div class="navbar">
+                <div class="navbar-item active" data-label="Home">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path id="in-icon" d="M15 17C14.2005 17.6224 13.1502 18 12 18C10.8498 18 9.79952 17.6224 9 17" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M2.35139 13.2135C1.99837 10.9162 1.82186 9.76763 2.25617 8.74938C2.69047 7.73112 3.65403 7.03443 5.58114 5.64106L7.02099 4.6C9.41829 2.86667 10.6169 2 12 2C13.3831 2 14.5817 2.86667 16.979 4.6L18.4189 5.64106C20.346 7.03443 21.3095 7.73112 21.7438 8.74938C22.1781 9.76763 22.0016 10.9162 21.6486 13.2135L21.3476 15.1724C20.8471 18.4289 20.5969 20.0572 19.429 21.0286C18.2611 22 16.5537 22 13.1388 22H10.8612C7.44633 22 5.73891 22 4.571 21.0286C3.40309 20.0572 3.15287 18.4289 2.65243 15.1724L2.35139 13.2135Z" stroke="#16171D" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="navbar-item" data-label="Chat">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path id="in-icon"  d="M8.5 14.5H15.5M8.5 9.5H12" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M14.1706 20.8905C18.3536 20.6125 21.6856 17.2332 21.9598 12.9909C22.0134 12.1607 22.0134 11.3009 21.9598 10.4707C21.6856 6.22838 18.3536 2.84913 14.1706 2.57107C12.7435 2.47621 11.2536 2.47641 9.8294 2.57107C5.64639 2.84913 2.31441 6.22838 2.04024 10.4707C1.98659 11.3009 1.98659 12.1607 2.04024 12.9909C2.1401 14.536 2.82343 15.9666 3.62791 17.1746C4.09501 18.0203 3.78674 19.0758 3.30021 19.9978C2.94941 20.6626 2.77401 20.995 2.91484 21.2351C3.05568 21.4752 3.37026 21.4829 3.99943 21.4982C5.24367 21.5285 6.08268 21.1757 6.74868 20.6846C7.1264 20.4061 7.31527 20.2668 7.44544 20.2508C7.5756 20.2348 7.83177 20.3403 8.34401 20.5513C8.8044 20.7409 9.33896 20.8579 9.8294 20.8905C11.2536 20.9852 12.7435 20.9854 14.1706 20.8905Z" stroke="#16171D" stroke-width="1.5" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <span class="badge">2</span>
+                </div>
+                <div class="navbar-item" data-label="Objects">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path id="in-icon"  d="M15.5 11C15.5 12.933 13.933 14.5 12 14.5C10.067 14.5 8.5 12.933 8.5 11C8.5 9.067 10.067 7.5 12 7.5C13.933 7.5 15.5 9.067 15.5 11Z" stroke="#16171D" stroke-width="1.5"/>
+                            <path d="M12 2C16.8706 2 21 6.03298 21 10.9258C21 15.8965 16.8033 19.3847 12.927 21.7567C12.6445 21.9162 12.325 22 12 22C11.675 22 11.3555 21.9162 11.073 21.7567C7.2039 19.3616 3 15.9137 3 10.9258C3 6.03298 7.12944 2 12 2Z" stroke="#16171D" stroke-width="1.5"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="navbar-item" data-label="Profile">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="#16171D" stroke-width="1.5"/>
+                            <path id="in-icon"  d="M7.5 17C9.8317 14.5578 14.1432 14.4428 16.5 17M14.4951 9.5C14.4951 10.8807 13.3742 12 11.9915 12C10.6089 12 9.48797 10.8807 9.48797 9.5C9.48797 8.11929 10.6089 7 11.9915 7C13.3742 7 14.4951 8.11929 14.4951 9.5Z" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </div>
+                <div class="navbar-item" data-label="List">
+                    <span class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path id="in-icon"  d="M3.5 9.36842C3.5 5.89491 3.5 4.15816 4.52513 3.07908C5.55025 2 7.20017 2 10.5 2L13.5 2C16.7998 2 18.4497 2 19.4749 3.07908C20.5 4.15816 20.5 5.89491 20.5 9.36842V14.6316C20.5 18.1051 20.5 19.8418 19.4749 20.9209C18.4497 22 16.7998 22 13.5 22L10.5 22C7.20017 22 5.55025 22 4.52513 20.9209C3.5 19.8418 3.5 18.1051 3.5 14.6316L3.5 9.36842Z" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path id="in-icon"  d="M8 2L8.0822 2.4932C8.28174 3.69044 8.38151 4.28906 8.80113 4.64453C9.22075 5 9.82762 5 11.0414 5L12.9586 5C14.1724 5 14.7793 5 15.1989 4.64453C15.6185 4.28906 15.7183 3.69044 15.9178 2.4932L16 2" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 16H12M8 11L16 11" stroke="#16171D" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+
+<script>
+
+
+
+</script>
+
+</body>
+</html>
