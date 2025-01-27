@@ -3827,6 +3827,90 @@ opacity: 1; /* Иконка становится ярче */
     white-space: nowrap;
 }
 
+.ozhidaet-ispolniteli {
+    bottom: 0 !important;
+}
+
+.tags-awaiting-zak {
+    background-color: #F9EFD2 !important;
+    color: #EEB711 !important;
+    white-space: nowrap;
+}
+
+.povtor-head-awaiting a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    text-decoration: underline;
+    color: #3498DB;
+
+}
+
+.check-list-input label {
+    display: flex;
+    align-items: center;
+}
+
+.check-list-input-all {
+    padding: 10px 12px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+}
+
+.povtor-head-checklist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.povtor-head-checklist h2 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.gradient-border-checklist {
+    width: auto;
+    white-space: nowrap;
+}
+
+.check-list-input {
+    padding: 18px;
+    background: #F6F7F9;
+    border-radius: 16px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+    margin-bottom: 10px;
+}
+
+.check-list-input input {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.povtor-head-awaiting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.povtor-head-awaiting p {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 19.6px;
+    letter-spacing: -0.02em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.povtor-head-awaiting strong {
+    color: red;
+}
+
+.button-gradient {
+    background: none;
+    color: black;
+}
+
 .tags-vipoln-zak {
     background-color: #EBF5FB !important;
     color: #3498DB !important;
@@ -3836,6 +3920,12 @@ opacity: 1; /* Иконка становится ярче */
 .tags-ozhidaet-zak {
     background-color: #E6F9FA !important;
     color: #00C4CC !important;
+    white-space: nowrap;
+}
+
+.tags-archive-zak {
+    background-color: #F0F3FA !important;
+    color: #8892AA !important;
     white-space: nowrap;
 }
 
@@ -4917,7 +5007,7 @@ input:checked + .iz-p-slider:before {
 .vash-zakaz-oplachen {
     height: auto;
 }
-.vash-zakaz-oplachen h2{
+/* .vash-zakaz-oplachen h2{
     font-size: 20px;
     line-height: 20px;
     font-weight: 600;
@@ -4926,10 +5016,15 @@ input:checked + .iz-p-slider:before {
     font-size: 16px;
     line-height: 16px;
     font-weight: 400;
-}
+} */
 
 .check-list-service-group {
     margin-bottom: 20px;
+}
+
+.check-list-service-group p {
+    margin-block-start: 0em;
+    margin-block-end: 10px;
 }
 
 .check-list-checkbox-container {
@@ -4994,15 +5089,15 @@ input:checked + .iz-p-slider:before {
 }
 
 .check-list-primary-btn {
-    background-color: #16C5CA;
+    background-color: black;
     color: white;
     border: none;
 }
 
 .check-list-secondary-btn {
     background-color: white;
-    color: #16C5CA;
-    border: 1px solid #16C5CA;
+    color: black;
+    border: 1px solid black;
 
 }
 
@@ -5128,9 +5223,9 @@ input:checked + .iz-p-slider:before {
 }
 .button-admin {
     background-color: white !important;
-    color: #00C4CC !important;
+    color: black !important;
     padding: 15px;
-    border: solid 1px #00C4CC !important;
+    border: solid 1px black !important;
     width: 90%;
     font-size: 16px;
     cursor: pointer;
@@ -5146,6 +5241,12 @@ input:checked + .iz-p-slider:before {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    border: solid 2px;
+    padding: 40px 10px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    background: url(../img/background.svg) no-repeat center center, linear-gradient(180deg, #FFFFFF 0%, #F2F4F7 15.76%, #F2F4F7 85.22%, #FFFFFF 100%);
+    background-size: cover;
 }
 
 .check-list-ispolniteli-timer span{
@@ -5159,9 +5260,9 @@ input:checked + .iz-p-slider:before {
     font-size: 48px;
     line-height: 48px;
     font-weight: 700;
-    color: #16C5CA;
+    color: black;
     margin-block-start: 0px;
-    margin-block-end: 30px;
+    margin-block-end: 0px;
 }
 .popup-vipolneno-ispol {
     z-index: 1002;
