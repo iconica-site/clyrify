@@ -825,6 +825,15 @@ body {
     display: block;
 }
 
+.platezhi-step {
+    display: none;
+}
+
+.platezhi-step.active {
+    display: block;
+}
+
+
 .obj-button-group {
     display: flex;
     justify-content: center;
@@ -1237,6 +1246,31 @@ opacity: 1; /* Иконка становится ярче */
     /* border-radius: 30%; */
     width: 30px;
 }
+
+.iz-p-obr-icon svg {
+    margin-right:  7px;
+}
+
+.iz-p-obr-sozdano svg {
+    margin-right: 7px;
+}
+
+.iz-p-obr-sozdano {
+    display: flex;
+    align-items: center;
+}
+
+.iz-p-obr-icon {
+    display: flex;
+    align-items: center;
+}
+
+.iz-p-obratnaya-head {
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+}
+
 .button {
     background-color: #16171D;
     color: white;
@@ -1247,6 +1281,11 @@ opacity: 1; /* Иконка становится ярче */
     cursor: pointer;
     border-radius: 50px;
     align-items: center;
+}
+
+.delete-my-account {
+    background-color: #FF5A5E;
+    color: white;
 }
 
 .button-orders {
@@ -4561,13 +4600,32 @@ body.modal-open {
     justify-content: space-between;
 }
 
+.iz-p-adress-vivod-green {
+    color: #27AE60;
+}
+
+.iz-p-date-number {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.iz-p-date-and-icon {
+    display: flex;
+    align-items: center;
+}
+
+.iz-p-date-and-icon svg {
+    margin-right: 5px;
+}
+
 .iz-p-date-number p {
     font-size: 14px;
     line-height: 14px;
     font-weight: 500;
     color: #6D6D6D;
     margin-block-start: 0em;
-    margin-block-end: 7px;
+    margin-block-end: 0px;
 }
 
 .iz-p-date-number span {
@@ -4581,7 +4639,7 @@ body.modal-open {
     font-size: 15px;
     line-height: 18px;
     font-weight: 400;
-    margin-block-start: 7px;
+    margin-block-start: 0px;
     margin-block-end: 0em;
 }
 
@@ -4602,13 +4660,13 @@ body.modal-open {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 10px;
     margin-bottom: 25px;
 }
 
 .iz-p-google-apple a{
     width: 50%;
     border: solid 1px #E4ECF0;
+    background: white;
     display: flex;
     justify-content: center;
     padding: 14px;
@@ -4623,20 +4681,20 @@ body.modal-open {
     font-weight: 700;
 }
 .iz-p-dannie {
-    margin-bottom: 30px;
+    /* margin-bottom: 20px; */
     display: flex;
     flex-direction: column;
 }
 .iz-p-verification {
     padding: 16px 14px;
     border-radius: 33px;
-    color: white;
+    color: #3498DB;
     font-size: 16px;
     line-height: 16px;
     font-weight: 600;
-    background-color: #16C5CA;
+    background-color: #EBF5FB;
     display: flex;
-    max-width: 203px;
+    /* max-width: 203px; */
     margin-top: 15px;
     justify-content: center;
 }
@@ -4864,7 +4922,23 @@ input:checked + .iz-p-slider:before {
 .iz-p-obr-obrashenie p{
     margin-block-start: 0em;
     margin-block-end: 0em;
+    padding: 5px;
+    background: #D9F1E3;
+    border-radius: 50px;
+    color: #27AE60;
 }
+
+.iz-p-svyazi-s-nami {
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.iz-p-obr-obrashenie-closed {
+    background: #F0F3FA !important;
+    color: #8892AA  !important;
+}
+
 .iz-p-obr-buttons a {
     padding: 10px 8px;
     color: gray;
@@ -4911,15 +4985,24 @@ input:checked + .iz-p-slider:before {
     height: auto;
 }
 .iz-p-svyazi-button a{
-    padding: 14px 16px;
+    padding: 10px 0px;
     border-radius: 33px;
-    color: #16C5CA;
-    border: solid 1px #16C5CA;
+    color: #3498DB;
+    background: #EBF5FB;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
 
+.iz-p-svyazi-s-nami p {
+    margin-block-start: 0em;
+    margin-block-end: 10px;
+}
+
 .iz-p-svyazi-button {
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .sposobi-oplati-karti {
@@ -4972,7 +5055,7 @@ input:checked + .iz-p-slider:before {
     font-weight: 700;
     line-height: 44px;
     color: black;
-    /* max-width: 340px; */
+    max-width: 340px;
 }
 
 .order-been-paid span {
@@ -5017,6 +5100,24 @@ input:checked + .iz-p-slider:before {
     line-height: 16px;
     font-weight: 400;
 } */
+
+.vxod-and-viplata {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.iz-p-dannie-phone-email {
+    padding: 16px;
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.vxod-and-viplata svg {
+    margin-right: 19px;
+}
 
 .check-list-service-group {
     margin-bottom: 20px;
@@ -5131,17 +5232,77 @@ input:checked + .iz-p-slider:before {
 
 .izbrannoe-pysto {
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 75vh;
-    flex-direction: column;
 }
+
+.iz-p-balance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: 
+        url('../img/back-balance.svg') no-repeat center center,
+        linear-gradient(180deg, #FFFFFF 0%, #F2F4F7 15.76%, #F2F4F7 85.22%, #FFFFFF 100%);
+    background-size: cover; /* Масштабирование */
+    margin-top: 15px;
+}
+
+.iz-p-balance span {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33.6px;
+}
+
+.iz-p-balance h2 {
+    margin-block-start: 0em;
+    margin-block-end: 15px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.iz-p-balance-button {
+    margin-top: 15px;
+}
+
+.iz-p-text {
+    padding: 5px 10px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+}
+
+.izbrannoe-pysto-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 40px 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 0 0.5px #E0E3E8;
+}
+
 .izbrannoe-pysto img {
     max-width: 100%;
     height: auto;
 }
 .izbrannoe-pysto p {
     color: #3C3C4399;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    letter-spacing: -0.02em;
+}
+
+.izbrannoe-pysto span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: center;
+    color: #383F4F80;
+
 }
 
 .iz-platezhi-ispolnetile span {
@@ -5149,10 +5310,10 @@ input:checked + .iz-p-slider:before {
 }
 
 .withdraw-container {
-    width: 90%;
-    max-width: 400px;
+    /* width: 90%;
+    max-width: 400px; */
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px 0 px;
 }
 
 .balance, .card-info, .amount-info {
@@ -5166,22 +5327,58 @@ input:checked + .iz-p-slider:before {
     font-size: 18px;
     font-weight: bold;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .balance span {
     color: #B6B6B6;
 }
 
+.balance-input input{
+    width: 100%;
+    font-size: 40px;
+    display: flex;
+    text-align: center;
+    outline: none;
+    border: none;
+}
+
+.balance-input p {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16.8px;
+    color: #383F4F;
+}
+
 .balance-amount {
-    font-size: 24px;
+    font-size: 16px;
     margin-top: 10px;
     color: #000;
 }
 
-.card-info {
-    font-size: 14px;
-    color: #999;
-    flex-direction: column;
+.card-info-icon {
     display: flex;
+    align-items: center;
+}
+
+.card-info-icon svg{
+    margin-right: 5px;
+}
+
+.card-info a {
+    color: #3498DB;
+    text-decoration: underline;
+}
+
+.card-info {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22.4px;
+    color: black;
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
 }
 .card-info input{
     border: none;
@@ -5205,7 +5402,7 @@ input:checked + .iz-p-slider:before {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #1fc8d5;
+    background-color: black;
     color: white;
     border: none;
     border-radius: 50px;

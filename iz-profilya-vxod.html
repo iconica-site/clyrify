@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница (исполнитель)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marck+Script&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/easy-autocomplete/1.3.5/easy-autocomplete.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-media.css">
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div class="index-center">
+        <div class="index-content">
+            <div class="city-buttons" id="profile-head">
+                <div class="c-city">
+                        <a><img src="img/back-button.svg" onclick="prevStep()"></a>
+                        <h1>Платежи и выплаты</h1>
+                </div>
+            </div>
+
+            <div class="iz-p-vxod">
+                <div class="povtor-head">
+                    <h2>Привязанные <span class="title-type-clean-span"> телефон и почта</span> </h2>
+                </div>
+                <div class="iz-p-dannie-phone-email">
+                    <div class="iz-p-dannie vxod-and-viplata">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="#F6F7F9"/>
+                            <path d="M9.14835 15.952C8.35832 14.5744 7.97687 13.4496 7.74686 12.3093C7.40668 10.623 8.18517 8.97566 9.47481 7.92455C10.0199 7.48031 10.6447 7.63209 10.967 8.21032L11.6946 9.51575C12.2714 10.5505 12.5598 11.0678 12.5026 11.6163C12.4454 12.1648 12.0565 12.6115 11.2786 13.505L9.14835 15.952ZM9.14835 15.952C10.7474 18.7402 13.2569 21.251 16.0484 22.852M16.0484 22.852C17.4259 23.642 18.5508 24.0235 19.691 24.2535C21.3773 24.5936 23.0247 23.8151 24.0758 22.5255C24.52 21.9805 24.3682 21.3556 23.79 21.0333L22.4846 20.3057C21.4499 19.7289 20.9325 19.4405 20.384 19.4977C19.8355 19.5549 19.3888 19.9439 18.4953 20.7217L16.0484 22.852Z" stroke="#383F4F" stroke-width="1.25" stroke-linejoin="round"/>
+                        </svg>
+                        <span>+7000000000</span>
+                    </div>
+                    <div class="iz-p-dannie vxod-and-viplata" style="margin-bottom: 0px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="16" fill="#F6F7F9"/>
+                            <path d="M11.834 13.0833L14.2857 14.5329C15.715 15.3779 16.2863 15.3779 17.7156 14.5329L20.1673 13.0833" stroke="#383F4F" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.68013 17.2297C7.73461 19.7843 7.76185 21.0616 8.70446 22.0078C9.64706 22.954 10.9589 22.9869 13.5827 23.0529C15.1998 23.0935 16.8009 23.0935 18.418 23.0529C21.0417 22.9869 22.3536 22.954 23.2962 22.0078C24.2388 21.0616 24.266 19.7843 24.3205 17.2297C24.338 16.4083 24.338 15.5917 24.3205 14.7703C24.266 12.2157 24.2388 10.9384 23.2962 9.99221C22.3536 9.04602 21.0417 9.01305 18.418 8.94713C16.8009 8.9065 15.1997 8.9065 13.5827 8.94713C10.9589 9.01304 9.64706 9.046 8.70445 9.9922C7.76184 10.9384 7.73461 12.2157 7.68013 14.7703C7.66261 15.5917 7.66261 16.4083 7.68013 17.2297Z" stroke="#383F4F" stroke-width="1.25" stroke-linejoin="round"/>
+                        </svg>
+                        <span>co-help@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="povtor-head">
+                    <h2>Верификация <span class="title-type-clean-span">аккаунта</span> </h2>
+                </div>
+                <div class="iz-p-dannie-phone-email">
+                    <div class="iz-p-dannie">
+                        <span>Для создания или получения заказов необходимо пройти верификацию </span>
+                        <div class="iz-p-verification">
+                            <a>Пройти верификацию</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="povtor-head">
+                    <h2>Связать <span class="title-type-clean-span">аккаунты</span> </h2>
+                </div>
+                <div class="iz-p-dannie">
+                    <div class="iz-p-google-apple">
+                        <a><img src="img/Google.png"></a>
+                        <a><img src="img/Apple.png"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-bar">
+                <button class="button delete-my-account open-new-modal">Удалить аккаунт</button>
+            </div>
+
+            <div class="new-overlay" id="new-overlay"></div>
+
+            <div class="new-modal take-object-modal delete-my-account-modal-main" id="new-modal">
+                <div class="new-modal-content delete-my-account-modal">
+                    <span class="new-close" id="new-close-modal">&times;</span>
+                    <div class="modal-zakaz-object modal-object-deltete">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="72" viewBox="0 0 75 72" fill="none">
+                            <g filter="url(#filter0_f_6_14305)">
+                            <rect x="16.0762" y="16" width="42.0252" height="39.2" rx="19.6" fill="url(#paint0_linear_6_14305)"/>
+                            </g>
+                            <g filter="url(#filter1_i_6_14305)">
+                            <rect x="7.5" y="16" width="64" height="48" rx="24" fill="#F6F7F9"/>
+                            </g>
+                            <rect x="7.75" y="16.25" width="63.5" height="47.5" rx="23.75" stroke="url(#paint1_linear_6_14305)" stroke-width="0.5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M47.0825 43.6564C47.0058 44.9096 46.9449 45.9041 46.8202 46.6984C46.6922 47.5131 46.4874 48.1915 46.0777 48.7849C45.7029 49.3278 45.2204 49.786 44.6608 50.1303C44.0491 50.5067 43.3661 50.6713 42.5531 50.75L36.4274 50.7499C35.6135 50.671 34.9297 50.5061 34.3176 50.129C33.7576 49.7841 33.2749 49.3251 32.9003 48.7813C32.4907 48.1869 32.2866 47.5075 32.1596 46.6917C32.0357 45.8962 31.9762 44.9003 31.9012 43.6453L31.25 32.75H47.75L47.0825 43.6564ZM37 45.9609C36.5858 45.9609 36.25 45.6252 36.25 45.2109L36.25 39.2109C36.25 38.7967 36.5858 38.4609 37 38.4609C37.4142 38.4609 37.75 38.7967 37.75 39.2109L37.75 45.2109C37.75 45.6252 37.4142 45.9609 37 45.9609ZM42.75 39.2109C42.75 38.7967 42.4142 38.4609 42 38.4609C41.5858 38.4609 41.25 38.7967 41.25 39.2109V45.2109C41.25 45.6252 41.5858 45.9609 42 45.9609C42.4142 45.9609 42.75 45.6252 42.75 45.2109V39.2109Z" fill="#FF5A5E"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M40.8473 29.2828C41.4124 29.3333 41.9435 29.5058 42.3996 29.8459C42.7369 30.0975 42.9712 30.4054 43.1714 30.7389C43.3569 31.048 43.5437 31.4333 43.7555 31.8704L44.1823 32.7507H48.5C49.0523 32.7507 49.5 33.1984 49.5 33.7507C49.5 34.303 49.0523 34.7507 48.5 34.7507C42.4998 34.7507 36.5002 34.7507 30.5 34.7507C29.9477 34.7507 29.5 34.303 29.5 33.7507C29.5 33.1984 29.9477 32.7507 30.5 32.7507H34.9098L35.2656 31.9702C35.4721 31.517 35.654 31.1178 35.8368 30.7975C36.0339 30.4521 36.2672 30.1324 36.6086 29.8705C37.0703 29.5163 37.6121 29.3367 38.1899 29.2841C38.6249 29.2445 39.0634 29.2499 39.5 29.2506C40.0108 29.2515 40.47 29.249 40.8473 29.2828ZM37.1078 32.7507H41.9597C41.733 32.2833 41.588 31.9871 41.4566 31.7682C41.2643 31.4479 41.0339 31.3074 40.6691 31.2748C40.4098 31.2516 40.0719 31.2507 39.5345 31.2507C38.9837 31.2507 38.637 31.2517 38.3712 31.2759C37.9971 31.3099 37.7639 31.4557 37.5739 31.7887C37.4494 32.0069 37.3139 32.299 37.1078 32.7507Z" fill="#FF5A5E"/>
+                            <defs>
+                            <filter id="filter0_f_6_14305" x="0.0761719" y="0" width="74.0254" height="71.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur_6_14305"/>
+                            </filter>
+                            <filter id="filter1_i_6_14305" x="7.5" y="16" width="64" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_innerShadow_6_14305"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.1 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_6_14305"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_6_14305" x1="37.0888" y1="35.6" x2="58.1014" y2="35.6" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#61A6F2"/>
+                            <stop offset="0.33" stop-color="#8F6FDB"/>
+                            <stop offset="0.66" stop-color="#FF5A5E"/>
+                            <stop offset="1" stop-color="#F2C94C"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_6_14305" x1="39.5" y1="64" x2="39.5" y2="16" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white"/>
+                            <stop offset="0.66138" stop-color="#61A6F2"/>
+                            <stop offset="0.767633" stop-color="#8F6FDB"/>
+                            <stop offset="0.881756" stop-color="#FF5A5E"/>
+                            <stop offset="1" stop-color="#F2C94C"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <h2>Удалить аккаунт?</h2>
+                        <p>Вы хотите удалить свой аккаунт? Это действие нельзя будет отменить</p>
+                    </div>
+
+                    <div class="bottom-bar-button button-take-object-modal">
+                        <button class="button button-red">Да, удалить аккаунт</button>
+                        <button class="button button-white" >Нет, я не хочу удалять</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+
+</script>
+</body>
+</html>
