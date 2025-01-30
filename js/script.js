@@ -252,6 +252,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+
 // Модальное окно на кнопку "Все фильтры"
 document.addEventListener('DOMContentLoaded', function() {
     const openNewModalBtns = document.querySelectorAll('.open-filters-modal');

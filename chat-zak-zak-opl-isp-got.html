@@ -17,9 +17,7 @@
 </head>
 
 <style>
-.non-active {
-    opacity: 0.5;
-}
+
 
 </style>
 
@@ -31,9 +29,9 @@
                     <div class="chat-header-content">
                         <a><img src="img/back-button.svg"></a>
                         <div class="user-info">
-                            <img src="img/Image-40.png" alt="Аватар" class="avatar">
+                            <img src="img/avatar5.png" alt="Аватар" class="avatar">
                             <div class="chat-username">
-                                <span class="username">Алина Доу</span>
+                                <span class="username">Ирина Анистратенко</span>
                                 <div class="chat-username-rate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                                         <g clip-path="url(#clip0_103_16098)">
@@ -71,9 +69,9 @@
                 </div>
                 <div class="chat-body">
                     <div class="date-chat">
-                        <span>Сегодня в 4:05</span>
+                        <span>Сегодня</span>
                     </div>
-                    <div class="message user-message">
+                    <div class="message bot-message">
                         <p>Здравствуйте! Хочу предложить Вам заказ</p>
                         <div class="predlozh-zakaz-block">
                             <div class="predl-zak-adres-date">
@@ -115,34 +113,141 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chat-buttons-flex">
-                            <div class="chat-otmenite-predl">
-                                <a>Принять</a>
-                            </div>
-                            <div class="chat-otmenite-predl chat-otmenite-predl-cancel">
-                                <a>Отклонить</a>
-                            </div>
-                        </div>
                         <div class="chat-time-of-sms">
                             <span>12:10</span>
                         </div>
                     </div>
-
-                    <div class="message bot-message">
-                        <p>Извините, не смогу выполнить заказ</p>
+                    <div class="message user-message">
+                        <p>Здравствуйте! Готов(а) выполнить ваш заказ</p>
                         <div class="chat-time-of-sms">
                             <span>12:10</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- <div class="chat-isp-nem">
-                    <span>Заказ отклонен. Мы сообщим об этом заказчику.</span>
+                <div class="chat-isp-nem">
+                    <span>Заказ оплачен. При необходимости обсудите детали заказа со специалистом в этом чате</span>
+                </div>
+                <div class="chat-button-vibrati-drug">
+                    <a id="open-modal">Отказаться от специалиста</a>
+                </div>
+<!-- 
+                <div class="object-custom-overlay" id="object-delete-popup-overlay"></div>
+
+                <div class="object-custom-popup chat-otkazati-modal" id="object-delete-popup">
+                    <div class="object-custom-popup-content">
+                        <h2>Отказаться от специалиста?</h2>
+                        <p>При отказе, деньги будут возвращены на вашу карту</p>
+                        <div class="object-custom-popup-buttons chat-otkazati">
+                            <button class="button">Да</button>
+                            <button class="button-admin">Нет</button>
+                        </div>
+                    </div>
                 </div> -->
 
-                <div class="chat-button-vibrati-drug">
-                    <a class="object-open-delete-popup">Перейти к заказам</a>
+                <div class="overlay" id="overlay"></div>
+
+                <div class="modal take-object-modal" id="modal">
+                    <div class="new-modal-content ">
+                        <span class="new-close" id="close-modal">&times;</span>
+                        <div class="modal-zakaz-object modal-object-deltete">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="72" viewBox="0 0 75 72" fill="none">
+                                <g filter="url(#filter0_f_6_57068)">
+                                <rect x="16.0762" y="16" width="42.0252" height="39.2" rx="19.6" fill="url(#paint0_linear_6_57068)"/>
+                                </g>
+                                <g filter="url(#filter1_i_6_57068)">
+                                <rect x="7.5" y="16" width="64" height="48" rx="24" fill="#F6F7F9"/>
+                                </g>
+                                <rect x="7.75" y="16.25" width="63.5" height="47.5" rx="23.75" stroke="url(#paint1_linear_6_57068)" stroke-width="0.5"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M34.6094 29.4097C34.7088 29.4868 34.7249 29.6246 34.7572 29.9001L34.8371 30.5822L34.8418 30.6107C34.9337 31.1626 35.0262 31.7179 35.1401 32.1003C35.2648 32.5194 35.4531 32.9111 35.8161 33.2186C36.1791 33.526 36.5964 33.6474 37.0303 33.7016C37.433 33.7518 37.9279 33.7518 38.4969 33.7518H40.5026C41.0716 33.7518 41.5665 33.7518 41.9692 33.7016C42.4031 33.6474 42.8204 33.526 43.1834 33.2186C43.5464 32.9111 43.7347 32.5194 43.8594 32.1003C43.9737 31.7164 44.066 31.1626 44.1583 30.6086L44.1583 30.6086L44.1619 30.5869L44.2471 29.8969C44.2809 29.6231 44.2978 29.4862 44.397 29.4097C44.4962 29.3332 44.6276 29.3509 44.8903 29.3864L44.9455 29.3941C45.9891 29.5417 46.8453 29.8555 47.5186 30.5643C48.1868 31.2676 48.4779 32.1529 48.6158 33.2326C48.75 34.2834 48.75 35.6253 48.75 37.3166V42.6869C48.75 44.3782 48.75 45.7202 48.6158 46.7709C48.4779 47.8506 48.1868 48.7359 47.5186 49.4392C46.8453 50.148 45.9891 50.4618 44.9455 50.6095C43.9399 50.7518 42.6587 50.7518 41.0583 50.7518H37.9417C36.3413 50.7518 35.0601 50.7518 34.0545 50.6095C33.0109 50.4618 32.1547 50.148 31.4814 49.4392C30.8132 48.7359 30.5221 47.8506 30.3842 46.7709C30.25 45.7202 30.25 44.3782 30.25 42.6869V42.6869V37.3166V37.3166C30.25 35.6253 30.25 34.2834 30.3842 33.2326C30.5221 32.1529 30.8132 31.2676 31.4814 30.5643C32.1547 29.8555 33.0109 29.5417 34.0545 29.3941L34.1138 29.3859C34.378 29.3503 34.5101 29.3325 34.6094 29.4097ZM35.5 38.25C35.0858 38.25 34.75 38.5858 34.75 39C34.75 39.4142 35.0858 39.75 35.5 39.75H43.5C43.9142 39.75 44.25 39.4142 44.25 39C44.25 38.5858 43.9142 38.25 43.5 38.25H35.5ZM35.5 43.25C35.0858 43.25 34.75 43.5858 34.75 44C34.75 44.4142 35.0858 44.75 35.5 44.75H39.5C39.9142 44.75 40.25 44.4142 40.25 44C40.25 43.5858 39.9142 43.25 39.5 43.25H35.5Z" fill="#16171D"/>
+                                <path d="M42.7327 29.9213C42.771 29.6116 42.7901 29.4568 42.7012 29.3556C42.6122 29.2545 42.4572 29.2536 42.1471 29.2519C41.802 29.25 41.4393 29.25 41.0586 29.25H37.942C37.5622 29.25 37.2004 29.25 36.8561 29.2519C36.5477 29.2536 36.3936 29.2544 36.3047 29.3549C36.2158 29.4554 36.2338 29.6094 36.2699 29.9176L36.325 30.3879C36.4263 30.9952 36.4929 31.3848 36.578 31.6705C36.6579 31.939 36.7293 32.0243 36.7859 32.0723C36.8426 32.1202 36.9385 32.1766 37.2164 32.2113C37.5151 32.2486 37.9153 32.25 38.5414 32.25H40.4586C41.0848 32.25 41.4849 32.2486 41.7836 32.2113C42.0616 32.1766 42.1575 32.1202 42.2141 32.0723C42.2707 32.0243 42.3421 31.939 42.4221 31.6705C42.5072 31.3845 42.5739 30.9942 42.6754 30.3855L42.7327 29.9213Z" fill="#16171D"/>
+                                <defs>
+                                <filter id="filter0_f_6_57068" x="0.0761719" y="0" width="74.0254" height="71.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur_6_57068"/>
+                                </filter>
+                                <filter id="filter1_i_6_57068" x="7.5" y="16" width="64" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_innerShadow_6_57068"/>
+                                <feOffset/>
+                                <feGaussianBlur stdDeviation="1"/>
+                                <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.1 0"/>
+                                <feBlend mode="normal" in2="shape" result="effect1_innerShadow_6_57068"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_6_57068" x1="37.0888" y1="35.6" x2="58.1014" y2="35.6" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#61A6F2"/>
+                                <stop offset="0.33" stop-color="#8F6FDB"/>
+                                <stop offset="0.66" stop-color="#FF5A5E"/>
+                                <stop offset="1" stop-color="#F2C94C"/>
+                                </linearGradient>
+                                <linearGradient id="paint1_linear_6_57068" x1="39.5" y1="64" x2="39.5" y2="16" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white"/>
+                                <stop offset="0.66138" stop-color="#61A6F2"/>
+                                <stop offset="0.767633" stop-color="#8F6FDB"/>
+                                <stop offset="0.881756" stop-color="#FF5A5E"/>
+                                <stop offset="1" stop-color="#F2C94C"/>
+                                </linearGradient>
+                                </defs>
+                            </svg>
+                            <h2>Отменить это предложение?</h2>
+                            <p>Оно больше не будет видно в чате с исполнителем</p>
+                        </div>
+                        <div class="news-zakaz-block chat-delete-zakaz">
+                            <div class="isp-zakaz-tags">
+                                <div class="zakaz-tags-number">
+                                    <span>Выполнен</span>
+                                    <div class="gradient-border" style="padding: 0px;">
+                                        <span class="order-number-zak">Заказ №987123</span>
+                                    </div>
+                                </div>
+                                <p>$ 150</p>
+                            </div>
+                            <div class="news-zakaz-head">
+                                <div class="news-zakaz-location">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0.833496C4.48301 0.833496 1.5 3.73986 1.5 7.28401C1.5 9.09898 2.26791 10.6162 3.34459 11.8685C4.41664 13.1153 5.81223 14.1209 7.11883 14.9298L7.12742 14.9351L7.13621 14.94C7.3997 15.0888 7.69736 15.1668 8 15.1668C8.30264 15.1668 8.6003 15.0888 8.86379 14.94L8.87146 14.9357L8.87897 14.9311C10.1903 14.1287 11.5862 13.1199 12.6578 11.8693C13.7335 10.6139 14.5 9.09298 14.5 7.28401C14.5 3.73986 11.517 0.833496 8 0.833496ZM8 4.66683C6.52724 4.66683 5.33333 5.86074 5.33333 7.3335C5.33333 8.80626 6.52724 10.0002 8 10.0002C9.47276 10.0002 10.6667 8.80626 10.6667 7.3335C10.6667 5.86074 9.47276 4.66683 8 4.66683Z" fill="#383F4F"></path>
+                                    </svg>
+                                    <p>Нарвская 11/3</p>
+                                </div>
+                                <svg class="object-open-delete-popup" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.99401 8H8" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.98913 12H7.99512" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M7.99987 4H8.00586" stroke="#16171D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> 
+                            </div>
+                            <div class="pov-bl-date">
+                                <div class="pov-bl-left">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+                                        <path d="M12.25 6.33317H1.75M9.33333 1.6665V3.99984M4.66667 1.6665V3.99984M4.55 13.3332H9.45C10.4301 13.3332 10.9201 13.3332 11.2945 13.1424C11.6238 12.9747 11.8915 12.7069 12.0593 12.3777C12.25 12.0033 12.25 11.5133 12.25 10.5332V5.63317C12.25 4.65308 12.25 4.16303 12.0593 3.78869C11.8915 3.4594 11.6238 3.19169 11.2945 3.02391C10.9201 2.83317 10.4301 2.83317 9.45 2.83317H4.55C3.56991 2.83317 3.07986 2.83317 2.70552 3.02391C2.37623 3.19169 2.10852 3.4594 1.94074 3.78869C1.75 4.16303 1.75 4.65308 1.75 5.63317V10.5332C1.75 11.5133 1.75 12.0033 1.94074 12.3777C2.10852 12.7069 2.37623 12.9747 2.70552 13.1424C3.07986 13.3332 3.56991 13.3332 4.55 13.3332Z" stroke="#383F4F" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span>Sep 16, 2024</span>
+                                </div>
+                                <div class="pov-bl-right">
+                                    <span>General</span>
+                                </div>
+                            </div>
+                            <div class="pov-bl-dop news-zakaz-bl-dop">
+                                <div class="pov-bl-dop-sp-p">
+                                    <span>Дополнительно:</span>
+                                    <p>Мойка остекления балкона  
+                                        Мойка остекления балкона 
+                                    </p>
+                                </div>
+                                <img src="img/Rectangle 30 (1).png">
+                            </div>
+                        </div>
+    
+                        <div class="bottom-bar-button button-take-object-modal">
+                            <button class="button button-red">Да, отменить</button>
+                            <button class="button button-white" >Нет, не отменять</button>
+                        </div>
+                    </div>
                 </div>
+
 
                 <div class="chat-input">
                     <div class="chat-input-content">
@@ -200,7 +305,6 @@
                     </div>
                 </div>
             </div>
-            
 
             <div class="new-overlay" id="new-overlay"></div>
 
@@ -253,7 +357,7 @@
                             </div>
                         </div>
 
-                        <div class="main-menu-setting delete-setting">
+                        <div class="main-menu-setting delete-setting" id="close-modal">
                             <div class="main-menu-setting-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                     <g clip-path="url(#clip0_6_11234)">
@@ -282,6 +386,7 @@
                     
                 </div>
             </div>
+            
             
         </div>
     </div>

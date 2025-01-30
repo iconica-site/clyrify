@@ -17,10 +17,10 @@
 </head>
 
 <style>
-.non-active {
-    opacity: 0.5;
-}
 
+.chat-flex-direct {
+    flex-direction: column;
+}
 </style>
 
 <body>
@@ -31,9 +31,9 @@
                     <div class="chat-header-content">
                         <a><img src="img/back-button.svg"></a>
                         <div class="user-info">
-                            <img src="img/Image-40.png" alt="Аватар" class="avatar">
+                            <img src="img/avatar5.png" alt="Аватар" class="avatar">
                             <div class="chat-username">
-                                <span class="username">Алина Доу</span>
+                                <span class="username">Ирина Анистратенко</span>
                                 <div class="chat-username-rate">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
                                         <g clip-path="url(#clip0_103_16098)">
@@ -71,9 +71,9 @@
                 </div>
                 <div class="chat-body">
                     <div class="date-chat">
-                        <span>Сегодня в 4:05</span>
+                        <span>Сегодня</span>
                     </div>
-                    <div class="message user-message">
+                    <div class="message bot-message">
                         <p>Здравствуйте! Хочу предложить Вам заказ</p>
                         <div class="predlozh-zakaz-block">
                             <div class="predl-zak-adres-date">
@@ -115,33 +115,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="chat-buttons-flex">
-                            <div class="chat-otmenite-predl">
-                                <a>Принять</a>
-                            </div>
-                            <div class="chat-otmenite-predl chat-otmenite-predl-cancel">
-                                <a>Отклонить</a>
-                            </div>
+                        <div class="chat-otmenite-predl chat-ispolniteli-otmenite">
+                            <a>Отменить предложение</a>
                         </div>
                         <div class="chat-time-of-sms">
                             <span>12:10</span>
                         </div>
                     </div>
-
-                    <div class="message bot-message">
-                        <p>Извините, не смогу выполнить заказ</p>
-                        <div class="chat-time-of-sms">
-                            <span>12:10</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="chat-isp-nem">
-                    <span>Заказ отклонен. Мы сообщим об этом заказчику.</span>
-                </div> -->
-
-                <div class="chat-button-vibrati-drug">
-                    <a class="object-open-delete-popup">Перейти к заказам</a>
                 </div>
 
                 <div class="chat-input">
@@ -200,8 +180,69 @@
                     </div>
                 </div>
             </div>
-            
 
+            <div class="filters-overlay show" id="filters-overlay"></div>
+
+            <div class="filters-modal show iz-p-modal-obratnaya-content" id="filters-modal">
+                <div class="filters-modal-content">
+                    <span class="filters-close" id="filters-close-modal">&times;</span>
+                    
+                    <div class="modal-zakaz-object modal-object-deltete chat-need-payment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="75" height="72" viewBox="0 0 75 72" fill="none">
+                            <g filter="url(#filter0_f_6_56853)">
+                            <rect x="16.0762" y="16" width="42.0252" height="39.2" rx="19.6" fill="url(#paint0_linear_6_56853)"/>
+                            </g>
+                            <g filter="url(#filter1_i_6_56853)">
+                            <rect x="7.5" y="16" width="64" height="48" rx="24" fill="#F6F7F9"/>
+                            </g>
+                            <rect x="7.75" y="16.25" width="63.5" height="47.5" rx="23.75" stroke="url(#paint1_linear_6_56853)" stroke-width="0.5"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M44.5 30.7495C42.4915 30.7495 40.6298 31.1441 39.1826 31.82C37.9648 32.3888 36.3256 32.7495 34.5 32.7495C33.488 32.7495 32.5299 32.6386 31.6674 32.441C30.341 32.1372 28.75 33.0463 28.75 34.6135V45.3855C28.75 46.2211 28.8824 47.0077 29.3164 47.6483C29.7652 48.3107 30.4569 48.7026 31.3326 48.9032C32.3095 49.1269 33.3802 49.2495 34.5 49.2495C36.5085 49.2495 38.3702 48.855 39.8174 48.179C41.0352 47.6102 42.6744 47.2495 44.5 47.2495C45.512 47.2495 46.4701 47.3604 47.3326 47.558C48.659 47.8618 50.25 46.9527 50.25 45.3855V34.6135C50.25 33.8166 50.1428 33.034 49.7218 32.387C49.2825 31.7117 48.5845 31.3059 47.6674 31.0958C46.6905 30.8721 45.6198 30.7495 44.5 30.7495ZM39.5 42.9995C41.1569 42.9995 42.5 41.6564 42.5 39.9995C42.5 38.3427 41.1569 36.9995 39.5 36.9995C37.8431 36.9995 36.5 38.3427 36.5 39.9995C36.5 41.6564 37.8431 42.9995 39.5 42.9995ZM33 39.9995C33.5523 39.9995 34 40.4472 34 40.9995V41.0085C34 41.5608 33.5523 42.0085 33 42.0085C32.4477 42.0085 32 41.5608 32 41.0085V40.9995C32 40.4472 32.4477 39.9995 33 39.9995ZM47 38.9917C47 38.4394 46.5523 37.9917 46 37.9917C45.4477 37.9917 45 38.4394 45 38.9917V39.0007C45 39.553 45.4477 40.0007 46 40.0007C46.5523 40.0007 47 39.553 47 39.0007V38.9917Z" fill="#16171D"/>
+                            <defs>
+                            <filter id="filter0_f_6_56853" x="0.0761719" y="0" width="74.0254" height="71.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feGaussianBlur stdDeviation="8" result="effect1_foregroundBlur_6_56853"/>
+                            </filter>
+                            <filter id="filter1_i_6_56853" x="7.5" y="16" width="64" height="48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="effect1_innerShadow_6_56853"/>
+                            <feOffset/>
+                            <feGaussianBlur stdDeviation="1"/>
+                            <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                            <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.1 0"/>
+                            <feBlend mode="normal" in2="shape" result="effect1_innerShadow_6_56853"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_6_56853" x1="37.0888" y1="35.6" x2="58.1014" y2="35.6" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#61A6F2"/>
+                            <stop offset="0.33" stop-color="#8F6FDB"/>
+                            <stop offset="0.66" stop-color="#FF5A5E"/>
+                            <stop offset="1" stop-color="#F2C94C"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear_6_56853" x1="39.5" y1="64" x2="39.5" y2="16" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="white"/>
+                            <stop offset="0.66138" stop-color="#61A6F2"/>
+                            <stop offset="0.767633" stop-color="#8F6FDB"/>
+                            <stop offset="0.881756" stop-color="#FF5A5E"/>
+                            <stop offset="1" stop-color="#F2C94C"/>
+                            </linearGradient>
+                            </defs>
+                        </svg>
+                        <h2>Необходима оплата</h2>
+                        <p>Подрядчик готов приступить к выполнению заказа. К
+                            продолжайте, вам необходимо пополнить баланс
+                            с суммой заказа</p>
+                    </div>
+                    
+                    <div class="new-modal-button-group chat-flex-direct">
+                        <button type="button">Пополнить баланс</button>
+                        <button type="button" class="button-admin">Отказаться от специалиста</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
             <div class="new-overlay" id="new-overlay"></div>
 
             <div class="new-modal" id="new-modal">
