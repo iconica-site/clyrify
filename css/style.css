@@ -5514,7 +5514,7 @@ body {
     /* border-bottom: solid 1px #0C0C0C0D; */
     position: fixed;
     top: 0;
-    width: 90%;
+    /* width: 90%; */
     /* max-width: 380px; Ограничение максимальной ширины */
     z-index: 10;
 }
@@ -5522,6 +5522,7 @@ body {
 .chat-header-content {
     display: flex;
     align-items: center;
+    gap: 8px;
 }
 
 .back-arrow {
