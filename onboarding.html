@@ -52,7 +52,7 @@
 .slide {
     display: none;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
 .slide.active {
@@ -64,6 +64,10 @@
 img {
     max-width: 100%;
     height: auto;
+    border: 1px solid;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 0px 0px 110px 0px;
 }
 
 .controls {
@@ -79,7 +83,7 @@ img {
     display: flex;
     justify-content: left;
     margin-bottom: 0px;
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 .dot {
@@ -93,7 +97,7 @@ img {
 .dot.active {
     background-color: black;
     width: 40px;
-    border-radius: 25%;
+    border-radius: 50px;
 }
 
 .onboarding-dalee-button {
@@ -105,50 +109,86 @@ img {
 }
 
 .background-onb-white {
-    background-color: white;
+    background: url(../img/background.svg) no-repeat center center, linear-gradient(180deg, #FFFFFF 0%, #F2F4F7 15.76%, #F2F4F7 85.22%, #FFFFFF 100%);
     /* border: solid 1px; */
-    border-radius: 0px 0px 50px 0px;
+    border-radius: 0px 0px 110px 0px;
 }
 
 .background-onb-gradient {
     background: linear-gradient(90deg, #61A6F2 0%, #8F6FDB 33%, #FF5A5E 66%, #F2C94C 100%);
-    padding: 0px 15px 15px 0px;
-    border-radius: 0px 0px 50px 0px;
+    padding: 0px 20px 20px 0px;
+    border-radius: 0px 0px 110px 0px;
     width: auto;
 }
 
+.frame1-gr {
+    padding: 0px 20px 20px 0px;
+}
+
+.frame1-wh {
+    margin-top: -20px;
+}
+
 .frame2-gr {
-    padding: 15px 15px 0px 0px;
-    border-radius: 0px 50px 0px 0px;
+    padding: 20px 5px 0px 0px;
+    border-radius: 0px 110px 0px 0px;
     width: auto;
 }
 
 .frame2-wh {
-    border-radius: 0px 50px 0px 0px;
+    border-radius: 0px 110px 0px 0px;
+    padding: 15px;
+}
+
+.frame2-wh img {
+    border-radius: 0px 110px 0px 0px;
+    border-bottom: none;
+}
+
+.frame3-wh img {
+    margin-top: 0px;
+    border-top: none;
 }
 
 .frame4-gr {
-    padding: 0px 0px 15px 15px;
-    border-radius: 0px 0px 0px 50px;
+    padding: 0px 0px 20px 20px;
+    border-radius: 0px 0px 0px 110px;
     width: auto;
 }
 
 .frame4-wh {
-    border-radius: 0px 0px 0px 50px;
+    border-radius: 0px 0px 0px 110px;
+    padding: 0px 0px 10px 10px
+}
+
+.frame4-wh img {
+    border-radius: 0px 0px 0px 110px;
+    margin-top: 0px;
+    border-top: none;
 }
 
 .frame5-gr {
-    padding: 15px 0px 0px 15px;
-    border-radius: 50px 0px 0px 0px;
+    padding: 20px 0px 0px 20px;
+    border-radius: 110px 0px 0px 0px;
     width: auto;
 }
 
 .frame5-wh {
-    border-radius: 50px 0px 0px 0px;
+    border-radius: 110px 0px 0px 0px;
+    padding: 5px 0px 0px 5px;
+}
+
+.frame5-wh img {
+    border-radius: 110px 0px 0px 0px;
+    border-bottom: none;
 }
 
 .slide p {
     text-align: justify;
+}
+
+.index-center {
+    padding: 0px;
 }
 
 @media (max-width: 375px) {
@@ -237,6 +277,19 @@ img {
                         <span class="dot"></span>
                     </div>
                     <p>Clyrify — умный сервис помощи для дома</p>
+                    <svg style="position: absolute;
+                    top: 55%;
+                    right: -5%;
+                    width: 40%;
+                    height: 40%;" xmlns="http://www.w3.org/2000/svg" width="94" height="211" viewBox="0 0 94 211" fill="none">
+                        <path d="M95.7315 2C98.4039 20.2688 91.4221 39.6725 77.7193 52.0603C64.0166 64.448 43.9959 69.4554 26.0679 64.9792C16.0172 62.4697 5.99455 56.3116 2.78007 46.4725C-0.434409 36.6334 6.6711 23.7282 17.0199 24.2007C24.5791 24.5462 30.4499 31.5419 32.2245 38.8911C33.999 46.2402 32.6674 53.9287 31.6651 61.4223C28.7253 83.4042 28.7015 105.773 31.5944 127.762C34.1515 147.196 39.2163 166.843 50.6869 182.746C62.1571 198.649 81.0214 210.243 100.595 208.893C120.168 207.544 138.667 190.633 137.982 171.043" stroke="url(#paint0_linear_6_49656)" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_6_49656" x1="2" y1="101.151" x2="135.56" y2="156.761" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#61A6F2"/>
+                        <stop offset="1" stop-color="#1270D9"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
                 <div class="slide">
                     <div class="background-onb-gradient frame2-gr">
@@ -252,6 +305,19 @@ img {
                         <span class="dot"></span>
                     </div>
                     <p>Мы поможем вам провести комплексную уборку, организовать пространство в комнатах, помыть окна, отнести вещи в химчистку и позаботиться о чистоте ваших домашних животных.</p>
+                    <svg style="position: absolute;
+                    top: 35%;
+                    left: -5%;
+                    width: 40%;
+                    height: 40%;" xmlns="http://www.w3.org/2000/svg" width="100" height="271" viewBox="0 0 100 271" fill="none">
+                        <path d="M-22.6104 2C-26.0491 25.5641 -17.0652 50.5921 0.566532 66.5705C18.1987 82.5489 43.9607 89.0077 67.0303 83.234C79.9632 79.9972 92.8595 72.0541 96.9962 59.363C101.133 46.672 91.9894 30.0263 78.6729 30.6357C68.9459 31.0813 61.3917 40.1047 59.1082 49.5841C56.8248 59.0635 58.5383 68.9806 59.828 78.6461C63.6109 107 63.6415 135.853 59.919 164.214C56.6286 189.282 50.1115 214.624 35.3514 235.136C20.5919 255.648 -3.68196 270.603 -28.8684 268.862C-54.0549 267.122 -77.8577 245.309 -76.9763 220.04" stroke="url(#paint0_linear_6_49738)" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_6_49738" x1="-77" y1="129.891" x2="94.9819" y2="201.326" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F2CE61"/>
+                        <stop offset="1" stop-color="#D9A712"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
                 <div class="slide">
                     <div class="background-onb-gradient frame3-gr">
@@ -267,6 +333,19 @@ img {
                         <span class="dot"></span>
                     </div>
                     <p>Мы обучаем наших помощников сами, поэтому гарантируем качество. Договор на каждую уборку защищает ваши права.</p>
+                    <svg style="position: absolute;
+                    top: 35%;
+                    right: -5%;
+                    width: 40%;
+                    height: 40%;" xmlns="http://www.w3.org/2000/svg" width="74" height="264" viewBox="0 0 74 264" fill="none">
+                        <path d="M81.0843 259.584C61.231 264.924 38.8743 259.705 23.4821 246.138C8.08987 232.57 0.120763 211.059 2.94979 190.714C7.29351 159.473 34.8435 132.131 29.2816 101.107C25.287 78.8343 4.43468 58.9581 10.7522 37.2062C16.5 17.4173 40.6199 10.6583 60.9292 7.12888C89.0456 2.24283 120.481 -1.97894 143.924 14.2118C164.127 28.1655 172.482 53.303 183.09 75.4432C193.699 97.5819 211.741 120.44 236.324 120.479C249.04 120.5 266.434 116.663 270.679 128.631C272.699 134.327 269.811 140.515 266.78 145.757C255.464 165.328 241.035 183.102 224.205 198.207C221.442 196.467 218.677 194.727 215.914 192.987" stroke="url(#paint0_linear_6_49820)" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_6_49820" x1="-10.2267" y1="203.5" x2="249.837" y2="185.139" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#6177F2"/>
+                        <stop offset="1" stop-color="#1230D9"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
                 <div class="slide">
                     <div class="background-onb-gradient frame4-gr">
@@ -282,6 +361,19 @@ img {
                         <span class="dot"></span>
                     </div>
                     <p>Чек-лист для каждой уборки в приложении, персональный помощник доступен 24/7 для оперативного решения вопросов.</p>
+                    <svg style="position: absolute;
+                    top: 10%;
+                    left: -5%;
+                    width: 40%;
+                    height: 40%;"  xmlns="http://www.w3.org/2000/svg" width="146" height="190" viewBox="0 0 146 190" fill="none">
+                        <path d="M-98 126.647C-94.1003 156.378 -69.3566 182.127 -39.9028 187.105C-10.449 192.082 21.3273 175.885 34.7065 149.074C41.6879 135.084 44.3281 118.359 55.4142 107.36C70.1231 92.7669 93.7403 93.7089 112.877 85.8406C133.834 77.2233 149.997 52.8173 141.85 31.6019C133.313 9.37567 105.291 2.95748 81.5771 2.18501C54.7284 1.3101 27.7802 3.541 1.43743 8.82069C-20.8476 13.2868 -43.7013 20.5137 -59.6839 36.7323C-75.6665 52.9509 -82.2875 80.3568 -69.2161 99.0188" stroke="url(#paint0_linear_6_49902)" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_6_49902" x1="-98" y1="91.0924" x2="68.0018" y2="227.966" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F2CE61"/>
+                        <stop offset="1" stop-color="#D9A712"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
                 <div class="slide">
                     <div class="background-onb-gradient frame5-gr">
@@ -297,6 +389,19 @@ img {
                         <span class="dot active"></span>
                     </div>
                     <p>Clyrify — мы позаботимся о вашем доме, как о своем!</p>
+                    <svg style="position: absolute;
+                    top: 35%;
+                    right: -5%;
+                    width: 40%;
+                    height: 40%;" xmlns="http://www.w3.org/2000/svg" width="66" height="185" viewBox="0 0 66 185" fill="none">
+                        <path d="M145.54 182.612C131.858 163.357 117.843 143.809 94.3601 131.072C84.6564 125.81 72.8964 121.712 58.1229 122.624C43.3496 123.537 25.088 130.536 15.1574 141.332C5.22663 152.127 8.11158 165.479 22.4775 165.38C36.1013 164.194 50.5492 152.169 53.8509 142.098C57.1526 132.028 52.2654 123.921 46.1877 117.193C37.0479 107.073 25.1025 98.7017 15.8801 88.6309C6.6578 78.5604 0.137883 66.3173 2.92011 51.5363C5.70233 36.7553 19.5242 19.1044 40.0784 9.21211C60.6326 -0.680167 86.1994 0.753827 88.8099 13.9965" stroke="url(#paint0_linear_6_49984)" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round"/>
+                        <defs>
+                        <linearGradient id="paint0_linear_6_49984" x1="-0.953117" y1="134.915" x2="140.101" y2="129.145" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#61A6F2"/>
+                        <stop offset="1" stop-color="#1270D9"/>
+                        </linearGradient>
+                        </defs>
+                    </svg>
                 </div>
         
                 <div class="controls">
