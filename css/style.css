@@ -6175,6 +6175,30 @@ body {
     width: 50%;
 }
 
+@media screen and (max-width: 430px) {
+    .onb {
+        zoom: 114%;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .onb {
+        zoom: 112%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .onb {
+        zoom: 106%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .onb {
+        zoom: 102%;
+    }
+}
+
 
 @media screen and (max-width: 350px) {
     .page-404-flex h2 {
